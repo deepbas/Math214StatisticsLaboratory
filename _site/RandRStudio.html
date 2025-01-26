@@ -5,7 +5,7 @@
 <meta name="generator" content="quarto-99.9.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Bastola">
-<meta name="dcterms.date" content="2025-01-25">
+<meta name="dcterms.date" content="2025-01-26">
 <title>Setting Up R and RStudio – Math 214: Statistical Laboratory</title>
 <style>
 code{white-space: pre-wrap;}
@@ -71,7 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-a0649ace7b9e9e15dfb5fe311d767a49.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5e22c608838ca9a1c04c2acb063cba6a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9e2db6d60132874137d35cd80df6d385.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-c2299866e9c1ed9e4d64cbb04b200562.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -124,10 +124,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lab-tutorials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Lab Tutorials</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-datasets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Datasets</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-lab-tutorials">
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-datasets">
+<li>
+    <a class="dropdown-item" href="./usdata.html">
+ <span class="dropdown-text">Dataset1</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Tutorials</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">
 <li>
     <a class="dropdown-item" href="./RandRStudio.html">
  <span class="dropdown-text">R and RStudio</span></a>
@@ -219,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 25, 2025</p>
+      <p class="date">January 26, 2025</p>
     </div>
   </div>
   
@@ -490,13 +501,13 @@ Primary workspace for writing <code>.Rmd</code> files with integrated code chunk
 <li>
 <strong>Create a Course Folder</strong>:
 <ul>
-<li>Create a new folder named <code>math216</code> in a suitable location on your computer or within your OneDrive account.</li>
+<li>Create a new folder named <code>math214</code> in a suitable location on your computer or within your OneDrive account.</li>
 </ul>
 </li>
 <li>
 <strong>Organize Files</strong>:
 <ul>
-<li>Move the downloaded .Rmd file into the <code>math216</code> folder to keep your course materials organized.</li>
+<li>Move the downloaded .Rmd file into the <code>math214</code> folder to keep your course materials organized.</li>
 </ul>
 </li>
 </ol></section></section></section><section id="installing-packages" class="level1"><h1>Installing Packages</h1>
@@ -651,7 +662,7 @@ Primary workspace for writing <code>.Rmd</code> files with integrated code chunk
 <li>
 <p><strong>Using RStudio</strong>:</p>
 <ul>
-<li>In RStudio, you can set the working directory through the menu by navigating to <code>Session &gt; Set Working Directory &gt; Choose Directory...</code> and selecting your <code>math216</code> folder.</li>
+<li>In RStudio, you can set the working directory through the menu by navigating to <code>Session &gt; Set Working Directory &gt; Choose Directory...</code> and selecting your <code>math214</code> folder.</li>
 </ul>
 </li>
 <li>
@@ -659,15 +670,15 @@ Primary workspace for writing <code>.Rmd</code> files with integrated code chunk
 <ul>
 <li>You can also set the working directory directly in an R script using the <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code> function. Place the following line of code at the beginning of your script:</li>
 </ul>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"~/math216"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Replace <code>"~/math216"</code> with the actual path to your course folder.</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"~/math214"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replace <code>"~/math214"</code> with the actual path to your course folder.</p>
 </li>
 <li>
 <p><strong>Using R Console</strong>:</p>
 <ul>
 <li>You can manually set the working directory in the R console with the same command:</li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"~/math216"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"~/math214"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </li>
 </ol></section></section></section><section id="loading-data" class="level1"><h1>Loading Data</h1>
 <p>Here’s how you can load a CSV file into R:</p>

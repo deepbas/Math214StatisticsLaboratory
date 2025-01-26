@@ -80,7 +80,16 @@ a {
   }
 }
 
-
+/* ========== Image Enhancements ========== */
+img {
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  transition: transform var(--transition-speed) ease;
+  
+  &:hover {
+    transform: scale(1.02);
+  }
+}
 
 /* ========== Utility Classes ========== */
 .fade {

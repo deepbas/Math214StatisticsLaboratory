@@ -1,12 +1,15 @@
 ---
 title: "Dataset 1: US States data"
 format: html
+resources:
+  - data/US_STATES.csv
 ---
 
+[Download raw data](data/US_STATES.csv){.download-link}
 
-```{r}
+
+```{r echo=FALSE}
 read.csv("data/US_STATES.csv") |>
   knitr::kable()
 ```
-
 
