@@ -1,0 +1,69 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Math 214: Statistical Laboratory"
+  site-url: "https://your-domain.org/"
+  navbar:
+    background: "primary"
+    search: true
+    left:
+      - text: "Home"
+        href: "index.html"
+      - text: "About"
+        href: "about.html"
+      - text: "Lab Tutorials"
+        menu:
+          - text: "R and RStudio"
+            href: "RandRStudio.html"
+      - text: "Datasets"
+        menu:
+          - text: "Dataset 1: US data"
+            href: "usdata.html"
+          # - text: "Dataset 2: Experiment Metrics"
+          #   href: "experiment-metrics.html"
+
+      # - text: "ShinyApps"
+      #   menu:
+      #     - text: "Sampling Distributions"
+      #       href: SamplingApp.html
+      #     - text: "Confidence Intervals"
+      #       href: ConfIntervalsApp.html
+      #     - text: "Power of Hypothesis Tests"
+      #       href: PowerApp.html
+      #     - text: "Simple Linear Regression"
+      #       href: SimpleLinearRegression.html
+
+
+format:
+  html:
+    theme: 
+      light: minty
+      dark: ["theme-dark.scss"]
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-link: true
+    code-tools: true
+    page-layout: full
+    embed-resources: true
+    anchor-sections: true
+    fig-cap-location: margin
+    grid:
+      sidebar-width: 300px
+
+resources:
+  - data/
+  - images/
+  - scss/
+  - fonts/
+
+
+filters:
+  - shinylive
+  - webr
+
+page-footer:
+  left: "© 2025 Deepak Bastola"
+  right: "[View source on GitHub](https://github.com/deepbas/)"

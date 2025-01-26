@@ -1,0 +1,16 @@
+---
+title: "About"
+---
+
+# Course overview
+
+Laboratory activities to reinforce topics covered in MATH 155 or equivalent. To further study and apply the concepts of descriptive and inferential statistics in a hands-on setting using technology. One-hour credit: Meets two hours per week. Prerequisites: C or better in MATH 155 or equivalent.
+
+
+## Learning Objectives
+
+<blockquote>
+
+To introduce the concepts of descriptive and inferential statistics in a hands-on setting.
+
+</blockquote>

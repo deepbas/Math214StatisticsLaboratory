@@ -1,0 +1,161 @@
+/* ========== Base Setup ========== */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+/* ========== Color Variables ========== */
+$brand-red: #e64626;
+$brand-blue: #5ebccf;
+$brand-dark-blue: #0148A4;
+$accent-green: #386247;
+$neutral-light: #E6E6E6;
+
+/* ========== Core Styles ========== */
+:root {
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* ========== Typography Enhancements ========== */
+[class^="color-"] {
+  &-red { color: #FF0000; }
+  &-blue { color: #0000FF; }
+  &-green { color: #008000; }
+  &-yellow { color: #FFFF00; }
+  &-orange { color: #FFA500; }
+  &-brand { color: $brand-red; }
+}
+
+a {
+  color: $brand-blue;
+  transition: color var(--transition-speed) ease;
+
+  &:hover {
+    color: darken($brand-blue, 10%);
+  }
+}
+
+/* ========== Component Styles ========== */
+.bql {
+  padding: 1rem;
+  margin: 0.5rem;
+  background: rgba(255,255,255,0.95);
+  border: 2px solid $neutral-light;
+  border-left: 5px solid $neutral-light;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 0.5rem;
+  font: {
+    style: italic;
+    weight: 600;
+    size: 1.1rem;
+  }
+}
+
+/* ========== Data Table Improvements ========== */
+.dataTable {
+  &-wrapper {
+    color: $brand-dark-blue;
+    
+    .paginate_button {
+      color: lighten($brand-dark-blue, 15%) !important;
+    }
+  }
+
+  tbody {
+    background: $neutral-light;
+    
+    tr {
+      transition: background var(--transition-speed) ease;
+      
+      &.odd { background: lighten($neutral-light, 5%); }
+      &.even { background: $brand-dark-blue; }
+      
+      &:hover {
+        background: $accent-green;
+        color: white;
+      }
+    }
+  }
+}
+
+/* ========== Image Enhancements ========== */
+img {
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  transition: transform var(--transition-speed) ease;
+  
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* ========== Utility Classes ========== */
+.fade {
+  opacity: 0.5;
+  transition: opacity var(--transition-speed) ease;
+  
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.spoiler {
+  position: relative;
+  cursor: pointer;
+  
+  &::before {
+    content: "⚠️ Spoiler Alert - Click to Reveal";
+    position: absolute;
+    background: rgba($brand-red, 0.1);
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+  }
+  
+  &:hover::before {
+    display: none;
+  }
+}
+
+/* ========== Layout Improvements ========== */
+.pull {
+  &-left, &-right {
+    width: 50%;
+    padding: 1rem;
+    
+    @media (max-width: 768px) {
+      width: 100%;
+      float: none;
+    }
+  }
+}
+
+/* ========== Code Display ========== */
+code {
+  background: rgba($neutral-light, 0.3);
+  padding: 0.2em 0.4em;
+  border-radius: 0.3em;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.9em;
+}
+
+/* ========== Navbar Dropdown ========== */
+.navbar .dropdown-menu {
+  max-height: 70vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.download-link {
+  display: block;
+  margin-top: 1rem;
+  color: #666;
+  font-size: 0.9em;
+  text-decoration: none;
+  
+  &:hover {
+    color: #333;
+    text-decoration: underline;
+  }
+}

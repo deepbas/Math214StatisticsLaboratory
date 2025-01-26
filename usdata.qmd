@@ -1,0 +1,12 @@
+---
+title: "Dataset 1: US States data"
+format: html
+---
+
+
+```{r}
+read.csv("data/US_STATES.csv") |>
+  knitr::kable()
+```
+
+
