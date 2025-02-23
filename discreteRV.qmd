@@ -1,0 +1,52 @@
+---
+title: "Discrete Random Variables"
+format: html
+warning: false
+---
+
+
+In the next three lab assignments, students will review the concept of a random variable and its probability distribution. They will learn how to determine key parameters such as mean, variance, and standard deviation, and compute probabilities for different outcomes.
+
+## Discrete Random Variables
+
+A random variable, typically denoted by $X$, is a variable that takes on a numerical value determined by chance for each outcome of an experiment. A probability distribution provides the probability for each possible value of $X$, often presented in a table, formula, or graph.
+
+*Example*: Suppose you flip a coin. If it lands on tails, you win \$1; if it lands on heads, you win \$0. Here, the random variable $X$ has two values: 1 and 0. Since the outcomes are equally likely, the probability distribution is:
+
+| $X$ | 0   | 1   |
+|-----|-----|-----|
+| $P(X=x)$ | $1/2$ | $1/2$ |
+
+This represents a discrete random variable, where the set of possible values is finite or countably infinite (e.g., the number of coin tosses before the first tail).
+
+## Parameters of a Probability Distribution
+
+### Mean (Expected Value)
+
+The mean is the central, weighted average value of the random variable. It is computed as:
+
+$$
+\begin{align}
+\mu = E[X] = \sum x \cdot P(X=x)
+\end{align}
+$$
+
+### Variance and Standard Deviation
+
+Variance measures the spread or dispersion of the random variable around the mean. It can be calculated using:
+
+$$
+\begin{align}
+\sigma^2 = \sum \left[(x-\mu)^2 \cdot P(X=x)\right]
+\end{align}
+$$
+
+Alternatively, for manual computation, the variance may be expressed as:
+
+$$
+\begin{align}
+\sigma^2 = \sum \left[x^2 \cdot P(X=x)\right] - \mu^2
+\end{align}
+$$
+
+The standard deviation is the square root of the variance.

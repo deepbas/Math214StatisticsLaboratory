@@ -1,0 +1,65 @@
+---
+title: "Continuous Random Variables"
+format: html
+warning: false
+---
+
+A continuous random variable can take infinitely many values, and its outcomes cannot be counted individually. Instead of listing outcomes, we describe its behavior using a probability density function (pdf) where the area under the curve represents probabilities.
+
+## Density Curves
+
+A density curve must satisfy:
+1. The total area under the curve equals 1.
+2. Every point on the curve has a non-negative height (i.e., the curve does not fall below the $x$-axis).
+
+## Common Continuous Distributions
+
+### Uniform Distribution
+
+A continuous random variable has a uniform distribution if its values are evenly spread over the interval $[a,b]$. Its density function is given by:
+
+$$
+\begin{align}
+f(x)=\frac{1}{b-a},\quad \text{for } a\le x\le b
+\end{align}
+$$
+
+The mean and standard deviation are:
+
+$$
+\begin{align}
+\mu &= \frac{a+b}{2},\\[1em]
+\sigma &= \frac{b-a}{\sqrt{12}}
+\end{align}
+$$
+
+### Normal Distribution
+
+The normal distribution is symmetric and bell-shaped, described by the equation:
+
+$$
+\begin{align}
+f(x)=\frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+\end{align}
+$$
+
+Here, $\mu$ is the mean and $\sigma$ is the standard deviation. A special case with $\mu=0$ and $\sigma=1$ is called the standard normal distribution.
+
+### Exponential Distribution
+
+The exponential distribution, often referred to as the waiting-time distribution, has the density function:
+
+$$
+\begin{align}
+f(x)=\frac{1}{\theta} \exp\left(-\frac{x}{\theta}\right),\quad \text{for } x\ge0
+\end{align}
+$$
+
+In this case, both the mean and the standard deviation are equal to $\theta$:
+
+$$
+\begin{align}
+\mu &= \theta,\\[1em]
+\sigma &= \theta
+\end{align}
+$$

@@ -49,6 +49,48 @@
     "text": "Fundamental Probability Rules\n\nAll probabilities must lie between 0 and 1.\nThe probabilities of all simple events in \\(\\mathbf{S}\\) must sum to 1.\n\nThe complement of event \\(A\\), denoted \\(\\bar{A}\\) or \\(A'\\), consists of all outcomes where \\(A\\) does not occur.\nA compound event combines two or more simple events.\nExample: Let \\(B = \\{\\text{number at most 4}\\} = \\{1,2,3,4\\}\\). The event “A or B” represents outcomes where either \\(A\\), \\(B\\), or both occur. To avoid double counting, we use the formal additive rule:\n\\[\n\\begin{align}\nP(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B)\n\\end{align}\n\\]"
   },
   {
+    "objectID": "continuousRV.html",
+    "href": "continuousRV.html",
+    "title": "Continuous Random Variables",
+    "section": "",
+    "text": "A continuous random variable can take infinitely many values, and its outcomes cannot be counted individually. Instead of listing outcomes, we describe its behavior using a probability density function (pdf) where the area under the curve represents probabilities."
+  },
+  {
+    "objectID": "continuousRV.html#density-curves",
+    "href": "continuousRV.html#density-curves",
+    "title": "Continuous Random Variables",
+    "section": "Density Curves",
+    "text": "Density Curves\nA density curve must satisfy: 1. The total area under the curve equals 1. 2. Every point on the curve has a non-negative height (i.e., the curve does not fall below the \\(x\\)-axis)."
+  },
+  {
+    "objectID": "continuousRV.html#common-continuous-distributions",
+    "href": "continuousRV.html#common-continuous-distributions",
+    "title": "Continuous Random Variables",
+    "section": "Common Continuous Distributions",
+    "text": "Common Continuous Distributions\n\nUniform Distribution\nA continuous random variable has a uniform distribution if its values are evenly spread over the interval \\([a,b]\\). Its density function is given by:\n\\[\n\\begin{align}\nf(x)=\\frac{1}{b-a},\\quad \\text{for } a\\le x\\le b\n\\end{align}\n\\]\nThe mean and standard deviation are:\n\\[\n\\begin{align}\n\\mu &= \\frac{a+b}{2},\\\\[1em]\n\\sigma &= \\frac{b-a}{\\sqrt{12}}\n\\end{align}\n\\]\n\n\nNormal Distribution\nThe normal distribution is symmetric and bell-shaped, described by the equation:\n\\[\n\\begin{align}\nf(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}} \\exp\\left(-\\frac{(x-\\mu)^2}{2\\sigma^2}\\right)\n\\end{align}\n\\]\nHere, \\(\\mu\\) is the mean and \\(\\sigma\\) is the standard deviation. A special case with \\(\\mu=0\\) and \\(\\sigma=1\\) is called the standard normal distribution.\n\n\nExponential Distribution\nThe exponential distribution, often referred to as the waiting-time distribution, has the density function:\n\\[\n\\begin{align}\nf(x)=\\frac{1}{\\theta} \\exp\\left(-\\frac{x}{\\theta}\\right),\\quad \\text{for } x\\ge0\n\\end{align}\n\\]\nIn this case, both the mean and the standard deviation are equal to \\(\\theta\\):\n\\[\n\\begin{align}\n\\mu &= \\theta,\\\\[1em]\n\\sigma &= \\theta\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "discreteRV.html",
+    "href": "discreteRV.html",
+    "title": "Discrete Random Variables",
+    "section": "",
+    "text": "In the next three lab assignments, students will review the concept of a random variable and its probability distribution. They will learn how to determine key parameters such as mean, variance, and standard deviation, and compute probabilities for different outcomes."
+  },
+  {
+    "objectID": "discreteRV.html#discrete-random-variables",
+    "href": "discreteRV.html#discrete-random-variables",
+    "title": "Discrete Random Variables",
+    "section": "Discrete Random Variables",
+    "text": "Discrete Random Variables\nA random variable, typically denoted by \\(X\\), is a variable that takes on a numerical value determined by chance for each outcome of an experiment. A probability distribution provides the probability for each possible value of \\(X\\), often presented in a table, formula, or graph.\nExample: Suppose you flip a coin. If it lands on tails, you win $1; if it lands on heads, you win $0. Here, the random variable \\(X\\) has two values: 1 and 0. Since the outcomes are equally likely, the probability distribution is:\n\n\n\n\\(X\\)\n0\n1\n\n\n\n\n\\(P(X=x)\\)\n\\(1/2\\)\n\\(1/2\\)\n\n\n\nThis represents a discrete random variable, where the set of possible values is finite or countably infinite (e.g., the number of coin tosses before the first tail)."
+  },
+  {
+    "objectID": "discreteRV.html#parameters-of-a-probability-distribution",
+    "href": "discreteRV.html#parameters-of-a-probability-distribution",
+    "title": "Discrete Random Variables",
+    "section": "Parameters of a Probability Distribution",
+    "text": "Parameters of a Probability Distribution\n\nMean (Expected Value)\nThe mean is the central, weighted average value of the random variable. It is computed as:\n\\[\n\\begin{align}\n\\mu = E[X] = \\sum x \\cdot P(X=x)\n\\end{align}\n\\]\n\n\nVariance and Standard Deviation\nVariance measures the spread or dispersion of the random variable around the mean. It can be calculated using:\n\\[\n\\begin{align}\n\\sigma^2 = \\sum \\left[(x-\\mu)^2 \\cdot P(X=x)\\right]\n\\end{align}\n\\]\nAlternatively, for manual computation, the variance may be expressed as:\n\\[\n\\begin{align}\n\\sigma^2 = \\sum \\left[x^2 \\cdot P(X=x)\\right] - \\mu^2\n\\end{align}\n\\]\nThe standard deviation is the square root of the variance."
+  },
+  {
     "objectID": "RandRStudio.html",
     "href": "RandRStudio.html",
     "title": "Setting Up R and RStudio",

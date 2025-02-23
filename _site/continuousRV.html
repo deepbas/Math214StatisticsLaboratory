@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Math 214: Statistical Laboratory</title>
+<title>Continuous Random Variables – Math 214: Statistical Laboratory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -95,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -156,9 +185,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#course-overview" id="toc-course-overview" class="nav-link active" data-scroll-target="#course-overview">Course overview</a>
+  <li><a href="#density-curves" id="toc-density-curves" class="nav-link active" data-scroll-target="#density-curves">Density Curves</a></li>
+  <li><a href="#common-continuous-distributions" id="toc-common-continuous-distributions" class="nav-link" data-scroll-target="#common-continuous-distributions">Common Continuous Distributions</a>
   <ul class="collapse">
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#uniform-distribution" id="toc-uniform-distribution" class="nav-link" data-scroll-target="#uniform-distribution">Uniform Distribution</a></li>
+  <li><a href="#normal-distribution" id="toc-normal-distribution" class="nav-link" data-scroll-target="#normal-distribution">Normal Distribution</a></li>
+  <li><a href="#exponential-distribution" id="toc-exponential-distribution" class="nav-link" data-scroll-target="#exponential-distribution">Exponential Distribution</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -168,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Continuous Random Variables</h1>
 </div>
 
 
@@ -185,14 +217,54 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="course-overview" class="level1">
-<h1>Course overview</h1>
-<p>Laboratory activities to reinforce topics covered in MATH 155 or equivalent. To further study and apply the concepts of descriptive and inferential statistics in a hands-on setting using technology. One-hour credit: Meets two hours per week. Prerequisites: C or better in MATH 155 or equivalent.</p>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<blockquote class="blockquote">
-<p>To introduce the concepts of descriptive and inferential statistics in a hands-on setting.</p>
-</blockquote>
+<p>A continuous random variable can take infinitely many values, and its outcomes cannot be counted individually. Instead of listing outcomes, we describe its behavior using a probability density function (pdf) where the area under the curve represents probabilities.</p>
+<section id="density-curves" class="level2">
+<h2 class="anchored" data-anchor-id="density-curves">Density Curves</h2>
+<p>A density curve must satisfy: 1. The total area under the curve equals 1. 2. Every point on the curve has a non-negative height (i.e., the curve does not fall below the <span class="math inline">\(x\)</span>-axis).</p>
+</section>
+<section id="common-continuous-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="common-continuous-distributions">Common Continuous Distributions</h2>
+<section id="uniform-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="uniform-distribution">Uniform Distribution</h3>
+<p>A continuous random variable has a uniform distribution if its values are evenly spread over the interval <span class="math inline">\([a,b]\)</span>. Its density function is given by:</p>
+<p><span class="math display">\[
+\begin{align}
+f(x)=\frac{1}{b-a},\quad \text{for } a\le x\le b
+\end{align}
+\]</span></p>
+<p>The mean and standard deviation are:</p>
+<p><span class="math display">\[
+\begin{align}
+\mu &amp;= \frac{a+b}{2},\\[1em]
+\sigma &amp;= \frac{b-a}{\sqrt{12}}
+\end{align}
+\]</span></p>
+</section>
+<section id="normal-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="normal-distribution">Normal Distribution</h3>
+<p>The normal distribution is symmetric and bell-shaped, described by the equation:</p>
+<p><span class="math display">\[
+\begin{align}
+f(x)=\frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+\end{align}
+\]</span></p>
+<p>Here, <span class="math inline">\(\mu\)</span> is the mean and <span class="math inline">\(\sigma\)</span> is the standard deviation. A special case with <span class="math inline">\(\mu=0\)</span> and <span class="math inline">\(\sigma=1\)</span> is called the standard normal distribution.</p>
+</section>
+<section id="exponential-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="exponential-distribution">Exponential Distribution</h3>
+<p>The exponential distribution, often referred to as the waiting-time distribution, has the density function:</p>
+<p><span class="math display">\[
+\begin{align}
+f(x)=\frac{1}{\theta} \exp\left(-\frac{x}{\theta}\right),\quad \text{for } x\ge0
+\end{align}
+\]</span></p>
+<p>In this case, both the mean and the standard deviation are equal to <span class="math inline">\(\theta\)</span>:</p>
+<p><span class="math display">\[
+\begin{align}
+\mu &amp;= \theta,\\[1em]
+\sigma &amp;= \theta
+\end{align}
+\]</span></p>
 
 
 </section>
