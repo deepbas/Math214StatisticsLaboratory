@@ -1,0 +1,57 @@
+---
+title: "Basics of Probability Theory"
+format: html
+warning: false
+---
+
+In probability theory, we study procedures that produce outcomes. Below are key definitions and concepts.
+
+## Key Definitions
+
+- **Event**: A collection of outcomes from an experiment (e.g., tossing a coin, rolling a die, selecting a person at random).
+- **Simple Event**: An outcome that cannot be decomposed into simpler components.
+- **Sample Space**: Denoted by $\mathbf{S}$, it is the set of all possible simple events.  
+  *Example*: For a die roll, $\mathbf{S} = \{1,2,3,4,5,6\}$.
+
+We denote probability by $P$. For any event $A$, $P(A)$ represents the probability of $A$ occurring.  
+*Example*: Let $A$ be the event "even number" for a die roll, so $A = \{2,4,6\}$.
+
+## Approaches to Estimating Probability
+
+### Relative Frequency Approximation
+
+Conduct or observe a procedure and count the number of times event $A$ occurs. The probability is approximated by:
+
+$$
+\begin{align}
+P(A) = \frac{\text{number of times } A \text{ occurred}}{\text{number of repetitions}}
+\end{align}
+$$
+
+### Classical Approach (Equally Likely Outcomes)
+
+Assume the procedure has $n$ equally likely simple events, and event $A$ can occur in $s$ ways:
+
+$$
+\begin{align}
+P(A) = \frac{\text{number of ways } A \text{ occurs}}{n} = \frac{s}{n}
+\end{align}
+$$
+
+*Example*: For $A = \{2,4,6\}$ in a die roll, $P(A)=\frac{3}{6}=\frac{1}{2}$.
+
+## Fundamental Probability Rules
+
+- All probabilities must lie between 0 and 1.
+- The probabilities of all simple events in $\mathbf{S}$ must sum to 1.
+
+The **complement** of event $A$, denoted $\bar{A}$ or $A'$, consists of all outcomes where $A$ does not occur.
+
+A **compound event** combines two or more simple events.  
+*Example*: Let $B = \{\text{number at most 4}\} = \{1,2,3,4\}$. The event "A or B" represents outcomes where either $A$, $B$, or both occur. To avoid double counting, we use the formal additive rule:
+
+$$
+\begin{align}
+P(A \text{ or } B) = P(A) + P(B) - P(A \text{ and } B)
+\end{align}
+$$

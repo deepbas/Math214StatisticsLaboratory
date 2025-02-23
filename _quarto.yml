@@ -16,6 +16,11 @@ website:
         menu:
           - text: "Dataset1"
             href: usdata.html
+            
+      - text: "Theory"
+        menu:
+          - text: "Basic Probability"
+            href: basicprobability.html
         #     target: "_blank"
         #   - text: "Lecture 2"
         #     href: Day2.html

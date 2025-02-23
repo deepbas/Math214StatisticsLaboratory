@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Math 214: Spring 2025 – Math 214: Statistical Laboratory</title>
+<title>Basics of Probability Theory – Math 214: Statistical Laboratory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -91,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -143,20 +172,32 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#key-definitions" id="toc-key-definitions" class="nav-link active" data-scroll-target="#key-definitions">Key Definitions</a></li>
+  <li><a href="#approaches-to-estimating-probability" id="toc-approaches-to-estimating-probability" class="nav-link" data-scroll-target="#approaches-to-estimating-probability">Approaches to Estimating Probability</a>
+  <ul class="collapse">
+  <li><a href="#relative-frequency-approximation" id="toc-relative-frequency-approximation" class="nav-link" data-scroll-target="#relative-frequency-approximation">Relative Frequency Approximation</a></li>
+  <li><a href="#classical-approach-equally-likely-outcomes" id="toc-classical-approach-equally-likely-outcomes" class="nav-link" data-scroll-target="#classical-approach-equally-likely-outcomes">Classical Approach (Equally Likely Outcomes)</a></li>
+  </ul></li>
+  <li><a href="#fundamental-probability-rules" id="toc-fundamental-probability-rules" class="nav-link" data-scroll-target="#fundamental-probability-rules">Fundamental Probability Rules</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Math 214: Spring 2025</h1>
+<h1 class="title">Basics of Probability Theory</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -168,10 +209,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to the world of statistics laboratory!</p>
-<p><img src="images/statistics.jpg" alt="Credit: Freepik" style="width: 100%;"></p>
+<p>In probability theory, we study procedures that produce outcomes. Below are key definitions and concepts.</p>
+<section id="key-definitions" class="level2">
+<h2 class="anchored" data-anchor-id="key-definitions">Key Definitions</h2>
+<ul>
+<li><strong>Event</strong>: A collection of outcomes from an experiment (e.g., tossing a coin, rolling a die, selecting a person at random).</li>
+<li><strong>Simple Event</strong>: An outcome that cannot be decomposed into simpler components.</li>
+<li><strong>Sample Space</strong>: Denoted by <span class="math inline">\(\mathbf{S}\)</span>, it is the set of all possible simple events.<br>
+<em>Example</em>: For a die roll, <span class="math inline">\(\mathbf{S} = \{1,2,3,4,5,6\}\)</span>.</li>
+</ul>
+<p>We denote probability by <span class="math inline">\(P\)</span>. For any event <span class="math inline">\(A\)</span>, <span class="math inline">\(P(A)\)</span> represents the probability of <span class="math inline">\(A\)</span> occurring.<br>
+<em>Example</em>: Let <span class="math inline">\(A\)</span> be the event “even number” for a die roll, so <span class="math inline">\(A = \{2,4,6\}\)</span>.</p>
+</section>
+<section id="approaches-to-estimating-probability" class="level2">
+<h2 class="anchored" data-anchor-id="approaches-to-estimating-probability">Approaches to Estimating Probability</h2>
+<section id="relative-frequency-approximation" class="level3">
+<h3 class="anchored" data-anchor-id="relative-frequency-approximation">Relative Frequency Approximation</h3>
+<p>Conduct or observe a procedure and count the number of times event <span class="math inline">\(A\)</span> occurs. The probability is approximated by:</p>
+<p><span class="math display">\[
+\begin{align}
+P(A) = \frac{\text{number of times } A \text{ occurred}}{\text{number of repetitions}}
+\end{align}
+\]</span></p>
+</section>
+<section id="classical-approach-equally-likely-outcomes" class="level3">
+<h3 class="anchored" data-anchor-id="classical-approach-equally-likely-outcomes">Classical Approach (Equally Likely Outcomes)</h3>
+<p>Assume the procedure has <span class="math inline">\(n\)</span> equally likely simple events, and event <span class="math inline">\(A\)</span> can occur in <span class="math inline">\(s\)</span> ways:</p>
+<p><span class="math display">\[
+\begin{align}
+P(A) = \frac{\text{number of ways } A \text{ occurs}}{n} = \frac{s}{n}
+\end{align}
+\]</span></p>
+<p><em>Example</em>: For <span class="math inline">\(A = \{2,4,6\}\)</span> in a die roll, <span class="math inline">\(P(A)=\frac{3}{6}=\frac{1}{2}\)</span>.</p>
+</section>
+</section>
+<section id="fundamental-probability-rules" class="level2">
+<h2 class="anchored" data-anchor-id="fundamental-probability-rules">Fundamental Probability Rules</h2>
+<ul>
+<li>All probabilities must lie between 0 and 1.</li>
+<li>The probabilities of all simple events in <span class="math inline">\(\mathbf{S}\)</span> must sum to 1.</li>
+</ul>
+<p>The <strong>complement</strong> of event <span class="math inline">\(A\)</span>, denoted <span class="math inline">\(\bar{A}\)</span> or <span class="math inline">\(A'\)</span>, consists of all outcomes where <span class="math inline">\(A\)</span> does not occur.</p>
+<p>A <strong>compound event</strong> combines two or more simple events.<br>
+<em>Example</em>: Let <span class="math inline">\(B = \{\text{number at most 4}\} = \{1,2,3,4\}\)</span>. The event “A or B” represents outcomes where either <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, or both occur. To avoid double counting, we use the formal additive rule:</p>
+<p><span class="math display">\[
+\begin{align}
+P(A \text{ or } B) = P(A) + P(B) - P(A \text{ and } B)
+\end{align}
+\]</span></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
