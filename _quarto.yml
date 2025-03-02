@@ -28,12 +28,16 @@ website:
           - text: "Continuous Random Variables"
             href: continuousRV.html
             target: "_blank"            
-        #   - text: "Lecture 3"
-        #     href: Day3.html
-        #     target: "_blank"
+          - text: "Sampling Distributions"
+            href: samplingdistribution.html
+            target: "_blank"
         #   - text: "Lecture 4"
         #     href: Day4.html
  
+      - text: "ShinyApps"
+        menu:
+          - text: "Sampling Distribution"
+            href: sampApp.html
 
       - text: "Tutorials"
         menu:

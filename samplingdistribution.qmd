@@ -1,0 +1,83 @@
+---
+title: "Sampling Distribution"
+format: html
+warning: false
+---
+
+**Sampling Distributions and the Central Limit Theorem**  
+
+When estimating population parameters like $\mu$, we use sample statistics $\bar{X}$. Different samples of size $n$ yield different means - these sample means are random variables with their own distribution. The **sampling distribution** describes all possible values of $\bar{X}$ from repeated sampling. Key properties:
+
+1. **Unbiasedness**: $\mu_{\bar{X}} = \mu$  
+2. **Precision**: $\sigma_{\bar{X}} = \sigma/\sqrt{n}$  
+
+The Central Limit Theorem (CLT) reveals the shape:  
+- **Exact normality**: If population is normal (any $n$)  
+- **Approximate normality**: For any population with $n \geq 30$  
+
+```{r}
+#| echo: false
+# Population and sampling distribution simulation
+library(ggplot2)
+set.seed(123)
+population <- rexp(100000, 0.5)  # Skewed population (μ=2)
+n <- 50
+sample_means <- replicate(5000, mean(sample(population, n)))
+```
+
+**Population Distribution**  
+
+```{r}
+#| echo: false
+# Population plot
+ggplot() +
+  geom_histogram(aes(x = population, y = after_stat(density)), 
+                 bins = 50, fill = "steelblue", alpha = 0.7) +
+  geom_vline(xintercept = 2, color = "red", linewidth = 1) +
+  annotate("text", x = 6, y = 0.3, 
+           label = "Exponential Population\n(μ = 2)", color = "steelblue") +
+  labs(title = "Parent Population Distribution",
+       x = "Value", y = "Density") +
+  theme_minimal()
+```
+
+
+*Exponential distribution with population mean*
+
+**Sampling Distribution**  
+
+```{r}
+#| echo: false
+# Sampling distribution plot
+ggplot() +
+  geom_histogram(aes(x = sample_means, y = after_stat(density)), 
+                 bins = 50, fill = "darkgreen", alpha = 0.7) +
+  stat_function(fun = dnorm, color = "red", linewidth = 1,
+                args = list(mean = 2, sd = sd(population)/sqrt(n))) +
+  annotate("text", x = 2.8, y = 1.2, 
+           label = "CLT Normal \n(μ = 2, SE = σ/√n)", 
+           color = "red") +
+  labs(title = "Sampling Distribution of Sample Means (n = 50)",
+       x = expression(bar(X)), y = "Density") +
+  theme_minimal()
+```
+
+ 
+*CLT convergence despite non-normal parent distribution*
+
+**Key Observations**  
+
+- Sample means cluster around population mean (unbiasedness)  
+- Spread decreases with larger $n$ (precision improvement)  
+- Normal shape emerges despite skewed population (CLT in action)  
+
+**Critical Implications**  
+
+- Enables inference even with unknown population distributions  
+- Justifies common statistical procedures (confidence intervals, hypothesis tests)  
+- Fails if:  
+
+  ‣ Small samples ($n < 30$) from non-normal populations  
+  ‣ Population variance is infinite  
+  
+  

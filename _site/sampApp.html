@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-99.9.9">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>Math 214: Spring 2025 – Math 214: Statistical Laboratory</title>
+<title>sampapp – Math 214: Statistical Laboratory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +18,6 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -40,8 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-9e2db6d60132874137d35cd80df6d385.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c2299866e9c1ed9e4d64cbb04b200562.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-dark-c2299866e9c1ed9e4d64cbb04b200562.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -67,18 +62,12 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
-<link rel="stylesheet" href="styles.css">
+}</script><link rel="stylesheet" href="styles.css">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Math 214</span>
@@ -90,8 +79,8 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -102,19 +91,19 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-datasets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Datasets</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-datasets">    
-        <li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-datasets">
+<li>
     <a class="dropdown-item" href="./usdata.html">
  <span class="dropdown-text">Dataset1</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-theory" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Theory</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-theory">    
-        <li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-theory">
+<li>
     <a class="dropdown-item" href="./basicprobability.html" target="_blank">
  <span class="dropdown-text">Basic Probability</span></a>
   </li>  
@@ -131,73 +120,47 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Sampling Distributions</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-shinyapps" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">ShinyApps</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-shinyapps">    
-        <li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-shinyapps">
+<li>
     <a class="dropdown-item" href="./sampApp.html">
  <span class="dropdown-text">Sampling Distribution</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Tutorials</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
-        <li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">
+<li>
     <a class="dropdown-item" href="./RandRStudio.html">
  <span class="dropdown-text">R and RStudio</span></a>
   </li>  
     </ul>
-  </li>
+</li>
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Math 214: Spring 2025</h1>
-</div>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header><iframe width="1280" height="1300" src="https://shinylive.io/r/app/#h=0&amp;code=NobwRAdghgtgpmAXGKAHVA6ASmANGAYwHsIAXOMpMAGwEsAjAJykYE8AKAZwAtaJWAlAB0IdJiw6laAE1YA3OI05xhohszbtU1IqWqCRYjRwItVRiewDmjGQFEAHqWbn1lgI7vtuxq-GbGInoAV05SeihlP2N2ABEAFWjLVGDGNNURYNoAAgAeAFpsgDNqLOkABSgrOHYRbOypPThKiDhqWrAAZVhtPits2Now2xCpEmyoCGlsgGEAGXihMAFcOuzOGTgIxjmoViJg0lqIevqN6S2WFrbj09OAdzbqa-a1u-rmaVoiACFD0hInA6XzCS1w2SW5SIKWoUDGJ0GwwYh2+EEQYLe7yx2IIHQAckRGDAoNQltkALwQsCMCCEmAYk7YpnYpYAVQgtCKdLJlKWjGCHKKDOZIruSywtCs3FI2U6AGs4I9pDyqYxqLSicLRaKlnM4EUZfLFXBlWAKar6HBSFAtdrmUsfrQYERpCSVXz6E7TatGXamUsZlBggRuKx3dTTMHQ0sVpi-adlNQ4ARyNNedSNfTlj7-b73pw6BdGABJCApI5LCBgqndGDaOCy2gALzg6Lw2RgfHNAFZwcSHD2AAyD8FyEnBBuUgDMI-W5FQPdjebuBc2JbLhw6curSzxwRglsY2SIRVlPSTnDbfa7lIAjLP+0Ph6Px5Pst3n3O4AvKR+l0yIH3RRaAIUtyw6ZQTR3MAsEmaQiBgWU4BNK9sjHUo31vAAmKd-2xKAU1RP5SABCAOmCVBXXIaDWUouEG06J1glheFqwIWFOE4c0lnoUgIHyVBbGJNgYzjbI8Lubg2lQeI4CcDpYjgBQdFQE1snoVhEAGRgMAGZDUCgOVsh+SIAVhcFujoTgQjYbJ2VoBQlFoUgw2zMSpOoGS5IrMBdjCbIKKolDsiwwcsO7fJBynSLb1EvMJI7KA+BeW53mtehlFIFKxPqdLsrAKEYThVFq28PRWAAeUOcCllQaFEVIGMEruPLJhuJZa3rThSp0cqqtIGqwE4c84Aapqc2xVrWleLpzz6HrdH0frBvgSYxuWVQsU205ttUDIIGURhHLyQoigFQiSHYPhy3BA4BsOcFlE41EBGyEA1jq1AAH0QRlApskYOACKkBR2HevNMowSDpCujdSAAEmh7aznuZyQ1h8t4d+ibmRpOlzTxol2FvOAADZmqxflBQJgVOWJsmKfeNVMwJ9U6Xp0nwVnQcMG7Rm7kYS1rQJoWoA58Fe2yW9ef505Ba9c1cUJmB2G7OBJfyLCVgBzNVfV8Ep3BLXZY+SMQ1YAmzdDDmBG2gBfV6AFIAD5HfUvhpEDEMamuw4saGUhwV9hHofBUxve4oa4Gekg4vqNZhrrC8ToBoHCNB8GBbgdwMb9uUg7h+GIGR1PelMchc4R-P1hGrRoR+gP2G14Oi-BQHtAIt94iwVk7FttYHeyF23c9KYvakyv-bCAvMdD7IW4gGe87DgipMjp6Nlj5Yh9dzFR+kOwFDISfAvo7a1juzHPoalPAamRRyl6-QwcxT6U6keh6CTdh0Inc1PobmEJuJcwhwi4v9N+w91j7mEkMGoYkACyQMTiUkCAKGGq0yK-xUAbCmSCviTAJgcKY7B4AEKwa+bWuEcanE6LEIh6CuAw2wVQkuJdMRWCsGVZ+YlOFlTrqgcEUBo4-0oa9AA1DlbI1QEJfV4GEIgNhYDsGEUCC2lIMAYAuAdZyrBNHa1HlxX8s4ii0GoNQSOABiW8RQADstj6AABYYzZEkcuU4MiYA-QoBsFy7BiA6CPOmSxRQ7FFEHHAasGwWzmlvBIqRsIMrsEaEmSOhVmLFXGA1EYKIt7xPcblKS8Avqdg5MSdobCB7n0ZJfP2id6w33+nfIsj9FocEzgmHoKdIhfQ-l-Go9SLxN2ALgW8iAAAcABddheYyrgMKMSVAxMJnggAH4dLuAEr60B4Apx2SI+pAhgAYAcJMsSoDSDzJrnWHebtOAwJYHA1KWIkGENQcQjByD2AAEJvmcFYCrLZ+zba4JoXcfBtA3kAw+aQk0kKyK-P+YCog1BtmwBUKwsFtD6HvMYZwGGiKAX+JRWi+AILsi4TEiXeO7i+G9S4D0IRIjCXItRcC22ripGeJ+rofh8FLnNjfDzRx+SmSJKBCkt8BkwjwNmknSJ7YTkcrcUyUgRS4AlL4E6EkTdMQO0xJie59B+FzPBBAQI9wjEhT7CwKwN5sg80HHzW52RYT7E3DwIg9wkzVCmOaAAYgAQTmJ0PuVS1gX2qn7TBjTCjNIfk-dpmJMFXICa8g6DL5VAn7nmOlbTnkeK4fSvp38U3a1UbCyYnBlVcrgLI+RAIlEq0MeaGc4JTHmMjl-CcLiVXYnFck5yqT0ydToBAfo2TkTwmPKeNVDZ029qkXO4ppTtUVMxPbVQdsRAiB4HwVggb0DsCyI9RQjlVBgDtpMoAA"></iframe>
 
 
 
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>Welcome to the world of statistics laboratory!</p>
-<p><img src="images/statistics.jpg" alt="Credit: Freepik" style="width: 100%;"></p>
-
-
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -759,7 +722,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-
 
 
 
