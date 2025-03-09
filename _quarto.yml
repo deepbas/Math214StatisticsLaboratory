@@ -31,14 +31,18 @@ website:
           - text: "Sampling Distributions"
             href: samplingdistribution.html
             target: "_blank"
-        #   - text: "Lecture 4"
-        #     href: Day4.html
+          - text: "Confidence Intervals"
+            href: ConfidenceIntervals.html
+            target: "_blank"
+      #   - text: "Lecture 4"
+      #     href: Day4.html
  
       - text: "ShinyApps"
         menu:
           - text: "Sampling Distribution"
             href: sampApp.html
-
+          - text: "Confidence Intervals"
+            href: CIApp.html
       - text: "Tutorials"
         menu:
           - text: "R and RStudio"
