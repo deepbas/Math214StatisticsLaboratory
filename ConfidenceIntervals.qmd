@@ -1,17 +1,25 @@
 ---
 title: "Confidence Intervals"
-format: html
-warning: false
+format: live-html
+engine: knitr
+toc: true
+webr:
+  packages:
+    - palmerpenguins 
+    - dplyr
+    - ggplot2
+    - purrr
 ---
+
+{{< include _extensions/r-wasm/live/_knitr.qmd >}}
 
 **Confidence intervals** estimate unknown population parameters (e.g., a mean $\mu$ or proportion) using sample data. While a **point estimator** like the sample mean $\bar{X}$ provides a single-value estimate, it lacks a measure of reliability. An **interval estimator** (confidence interval) addresses this by producing a range of values with an associated **confidence level** (e.g., 95%). This confidence level reflects the long-run success rate of the method: *if we repeatedly sampled the population and constructed intervals, 95% of those intervals would contain the true parameter*. This "repeated sampling" interpretation emphasizes that the confidence level describes the *method’s reliability*, not the probability that a single interval contains the parameter.
 
 To illustrate, let’s simulate 95% confidence intervals for a population mean $\mu = 50$ using R. We’ll generate 50 samples (each with $n=30$ observations) from a normal distribution, compute their confidence intervals, and visualize results. Plotting these intervals shows most (≈95%) capture $\mu$, while a few miss it – mirroring the confidence level’s meaning. The proportion of intervals containing $\mu$ will typically hover near 0.95, with deviations due to random sampling.
 
-```{r}
+```{webr}
 #| echo: false
 # Simulate repeated sampling and plot CIs
-library(tidyverse)
 set.seed(123)
 true_mean <- 50
 cis <- map_df(1:100, ~{

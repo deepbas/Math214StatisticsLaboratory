@@ -1,8 +1,17 @@
 ---
 title: "Sampling Distribution"
-format: html
-warning: false
+format: live-html
+engine: knitr
+toc: true
+webr:
+  packages:
+    - palmerpenguins 
+    - dplyr
+    - ggplot2
+    - purrr
 ---
+
+{{< include _extensions/r-wasm/live/_knitr.qmd >}}
 
 **Sampling Distributions and the Central Limit Theorem**  
 
@@ -15,8 +24,7 @@ The Central Limit Theorem (CLT) reveals the shape:
 - **Exact normality**: If population is normal (any $n$)  
 - **Approximate normality**: For any population with $n \geq 30$  
 
-```{r}
-#| echo: false
+```{webr}
 # Population and sampling distribution simulation
 library(ggplot2)
 set.seed(123)
@@ -27,8 +35,7 @@ sample_means <- replicate(5000, mean(sample(population, n)))
 
 **Population Distribution**  
 
-```{r}
-#| echo: false
+```{webr}
 # Population plot
 ggplot() +
   geom_histogram(aes(x = population, y = after_stat(density)), 
@@ -46,8 +53,7 @@ ggplot() +
 
 **Sampling Distribution**  
 
-```{r}
-#| echo: false
+```{webr}
 # Sampling distribution plot
 ggplot() +
   geom_histogram(aes(x = sample_means, y = after_stat(density)), 

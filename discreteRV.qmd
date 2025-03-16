@@ -4,7 +4,6 @@ format: html
 warning: false
 ---
 
-
 In the next three lab assignments, students will review the concept of a random variable and its probability distribution. They will learn how to determine key parameters such as mean, variance, and standard deviation, and compute probabilities for different outcomes.
 
 ## Discrete Random Variables
