@@ -18,7 +18,6 @@ webr:
 To illustrate, let’s simulate 95% confidence intervals for a population mean $\mu = 50$ using R. We’ll generate 50 samples (each with $n=30$ observations) from a normal distribution, compute their confidence intervals, and visualize results. Plotting these intervals shows most (≈95%) capture $\mu$, while a few miss it – mirroring the confidence level’s meaning. The proportion of intervals containing $\mu$ will typically hover near 0.95, with deviations due to random sampling.
 
 ```{webr}
-#| echo: false
 # Simulate repeated sampling and plot CIs
 set.seed(123)
 true_mean <- 50
