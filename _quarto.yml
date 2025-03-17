@@ -21,19 +21,14 @@ website:
         menu:
           - text: "Basic Probability"
             href: basicprobability.html
-            target: "_blank"
           - text: "Discrete Random Variables"
             href: discreteRV.html
-            target: "_blank"
           - text: "Continuous Random Variables"
             href: continuousRV.html
-            target: "_blank"            
           - text: "Sampling Distributions"
             href: samplingdistribution.html
-            target: "_blank"
           - text: "Confidence Intervals"
             href: ConfidenceIntervals.html
-            target: "_blank"
       #   - text: "Lecture 4"
       #     href: Day4.html
  
