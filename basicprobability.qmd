@@ -1,6 +1,10 @@
 ---
 title: "Basics of Probability Theory"
-format: html
+format: 
+  live-html:
+    theme:
+      light: minty
+      dark: darkly 
 warning: false
 ---
 

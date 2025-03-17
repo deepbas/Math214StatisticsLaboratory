@@ -1,6 +1,10 @@
 ---
 title: "Continuous Random Variables"
-format: html
+format: 
+  live-html:
+    theme:
+      light: minty
+      dark: darkly 
 warning: false
 ---
 
