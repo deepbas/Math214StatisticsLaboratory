@@ -3,8 +3,8 @@ title: "Basics of Probability Theory"
 format: 
   live-html:
     theme:
-      light: [solar, theme-light.scss]
-      dark: [darkly, theme-dark.scss]
+      light: [vapor, theme-light.scss]
+      dark: [simplex, theme-dark.scss]
 warning: false
 ---
 
