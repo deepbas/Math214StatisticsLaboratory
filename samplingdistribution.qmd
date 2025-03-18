@@ -3,8 +3,8 @@ title: "Sampling Distribution"
 format: 
   live-html:
     theme:
-      light: minty
-      dark: darkly 
+      light: [solar, theme-light.scss]
+      dark: [darkly, theme-dark.scss]
 engine: knitr
 toc: true
 webr:
