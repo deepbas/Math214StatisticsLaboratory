@@ -1,6 +1,6 @@
 project:
   type: website
-output-dir: docs
+  output-dir: docs
 
 website:
   title: "Math 214: Statistical Laboratory"
@@ -16,7 +16,6 @@ website:
         menu:
           - text: "Dataset1"
             href: usdata.html
-            
       - text: "Theory"
         menu:
           - text: "Basic Probability"
@@ -29,9 +28,6 @@ website:
             href: samplingdistribution.html
           - text: "Confidence Intervals"
             href: ConfidenceIntervals.html
-      #   - text: "Lecture 4"
-      #     href: Day4.html
- 
       - text: "ShinyApps"
         menu:
           - text: "Sampling Distribution"
@@ -42,17 +38,6 @@ website:
         menu:
           - text: "R and RStudio"
             href: RandRStudio.html
-      # - text: "ShinyApps"
-      #   menu:
-      #     - text: "Sampling Distributions"
-      #       href: SamplingApp.html
-      #     - text: "Confidence Intervals"
-      #       href: ConfIntervalsApp.html
-      #     - text: "Power of Hypothesis Tests"
-      #       href: PowerApp.html
-      #     - text: "Simple Linear Regression"
-      #       href: SimpleLinearRegression.html
-
 
 format:
   html:
@@ -60,8 +45,8 @@ format:
     fontsize: 1.1em
     code-overflow: wrap
     theme:
-      light: minty
-      dark: darkly
+      light: [lux, theme-light.scss]
+      dark: [litera, theme-dark.scss]
     css: styles.css
     toc: true
     page-layout: full
@@ -69,12 +54,13 @@ format:
     anchor-sections: true
     fig-cap-location: margin
     reference-location: margin
-    footnotes-hover: true 
+    footnotes-hover: true
+
 filters:
   - shinylive
   - webr
 
-page-footer: 
+page-footer:
   left: |
     <span class="faux-block">&#169; 2024 Deepak Bastola</span>
   right: |
