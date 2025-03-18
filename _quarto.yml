@@ -18,8 +18,10 @@ website:
             href: usdata.html
       - text: "Theory"
         menu:
+          - text: "Basic Statistics"
+            href: basicstatistics.html
           - text: "Basic Probability"
-            href: basicprobability.html
+            href: basicprobability.html            
           - text: "Discrete Random Variables"
             href: discreteRV.html
           - text: "Continuous Random Variables"

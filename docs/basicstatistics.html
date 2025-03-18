@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Continuous Random Variables – Math 214: Statistical Laboratory</title>
+<title>Basics of Statistics – Math 214: Statistical Laboratory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,8 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-a0649ace7b9e9e15dfb5fe311d767a49.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-838bcf991c720983eb733c8838888f3d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-dark-cd3428655bdffd71ea45cf93d4be1dc5.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-2094000a3a583b583f096d468dd24b7a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-dark-c12e3b5f23871a27719e9dbe6763da65.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -216,7 +216,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Continuous Random Variables</h1>
+<h1 class="title">Basics of Statistics</h1>
 </div>
 
 
@@ -233,54 +233,81 @@ window.Quarto = {
 </header>
 
 
-<p>A continuous random variable can take infinitely many values, and its outcomes cannot be counted individually. Instead of listing outcomes, we describe its behavior using a probability density function (pdf) where the area under the curve represents probabilities.</p>
-<section id="density-curves" class="level2">
-<h2 class="anchored" data-anchor-id="density-curves">Density Curves</h2>
-<p>A density curve must satisfy: 1. The total area under the curve equals 1. 2. Every point on the curve has a non-negative height (i.e., the curve does not fall below the <span class="math inline">\(x\)</span>-axis).</p>
+<section id="populations-vs.-samples" class="level2">
+<h2 class="anchored" data-anchor-id="populations-vs.-samples"><strong>1. Populations vs.&nbsp;Samples</strong></h2>
+<ul>
+<li><strong>Population</strong>: Entire group of interest (e.g., all SU undergraduate students, all cars in a parking lot).<br>
+</li>
+<li><strong>Sample</strong>: Subset of the population used for analysis.<br>
+</li>
+<li><strong>Key criteria for a good sample</strong>:
+<ul>
+<li><strong>Random</strong>: Every experimental unit has an equal chance of being selected.<br>
+</li>
+<li><strong>Representative</strong>: Reflects the population’s diversity (e.g., includes all genders, majors).</li>
+</ul></li>
+</ul>
+<p><em>Example</em>: To study SU students’ sleep habits, randomly select 200 students across all majors/years.</p>
 </section>
-<section id="common-continuous-distributions" class="level2">
-<h2 class="anchored" data-anchor-id="common-continuous-distributions">Common Continuous Distributions</h2>
-<section id="uniform-distribution" class="level3">
-<h3 class="anchored" data-anchor-id="uniform-distribution">Uniform Distribution</h3>
-<p>A continuous random variable has a uniform distribution if its values are evenly spread over the interval <span class="math inline">\([a,b]\)</span>. Its density function is given by:</p>
-<p><span class="math display">\[
-\begin{align}
-f(x)=\frac{1}{b-a},\quad \text{for } a\le x\le b
-\end{align}
-\]</span></p>
-<p>The mean and standard deviation are:</p>
-<p><span class="math display">\[
-\begin{align}
-\mu &amp;= \frac{a+b}{2},\\[1em]
-\sigma &amp;= \frac{b-a}{\sqrt{12}}
-\end{align}
-\]</span></p>
+<section id="variables-data-types" class="level2">
+<h2 class="anchored" data-anchor-id="variables-data-types"><strong>2. Variables &amp; Data Types</strong></h2>
+<p>Variables describe experimental units (e.g., age, major, car color).</p>
+<section id="numerical-quantitative-data" class="level3">
+<h3 class="anchored" data-anchor-id="numerical-quantitative-data"><strong>Numerical (Quantitative) Data</strong></h3>
+<ul>
+<li>Expressed as numbers with units.<br>
+</li>
+<li><em>Examples</em>: Height (cm), exam scores, years of education.</li>
+</ul>
 </section>
-<section id="normal-distribution" class="level3">
-<h3 class="anchored" data-anchor-id="normal-distribution">Normal Distribution</h3>
-<p>The normal distribution is symmetric and bell-shaped, described by the equation:</p>
-<p><span class="math display">\[
-\begin{align}
-f(x)=\frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
-\end{align}
-\]</span></p>
-<p>Here, <span class="math inline">\(\mu\)</span> is the mean and <span class="math inline">\(\sigma\)</span> is the standard deviation. A special case with <span class="math inline">\(\mu=0\)</span> and <span class="math inline">\(\sigma=1\)</span> is called the standard normal distribution.</p>
+<section id="categorical-qualitative-data" class="level3">
+<h3 class="anchored" data-anchor-id="categorical-qualitative-data"><strong>Categorical (Qualitative) Data</strong></h3>
+<ul>
+<li>Non-numeric labels or categories.
+<ul>
+<li><strong>Nominal</strong>: No inherent order (e.g., gender, car color).<br>
+</li>
+<li><strong>Ordinal</strong>: Ordered categories (e.g., product ratings: Poor, Fair, Good).</li>
+</ul></li>
+</ul>
 </section>
-<section id="exponential-distribution" class="level3">
-<h3 class="anchored" data-anchor-id="exponential-distribution">Exponential Distribution</h3>
-<p>The exponential distribution, often referred to as the waiting-time distribution, has the density function:</p>
-<p><span class="math display">\[
-\begin{align}
-f(x)=\frac{1}{\theta} \exp\left(-\frac{x}{\theta}\right),\quad \text{for } x\ge0
-\end{align}
-\]</span></p>
-<p>In this case, both the mean and the standard deviation are equal to <span class="math inline">\(\theta\)</span>:</p>
-<p><span class="math display">\[
-\begin{align}
-\mu &amp;= \theta,\\[1em]
-\sigma &amp;= \theta
-\end{align}
-\]</span></p>
+</section>
+<section id="summarizing-data" class="level2">
+<h2 class="anchored" data-anchor-id="summarizing-data"><strong>3. Summarizing Data</strong></h2>
+<section id="numerical-data" class="level3">
+<h3 class="anchored" data-anchor-id="numerical-data"><strong>Numerical Data</strong></h3>
+<ul>
+<li><strong>Mean</strong>: Average value:<br>
+<span class="math inline">\(\bar{x} = \frac{1}{n}\sum_{i=1}^n x_i\)</span><br>
+</li>
+<li><strong>Variance</strong>: Spread around the mean:<br>
+<span class="math inline">\(s^2 = \frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})^2\)</span></li>
+</ul>
+</section>
+<section id="categorical-data" class="level3">
+<h3 class="anchored" data-anchor-id="categorical-data"><strong>Categorical Data</strong></h3>
+<ul>
+<li>Use <strong>frequency counts</strong> or <strong>percentages</strong> (e.g., 30% Biology majors, 70% Engineering).</li>
+</ul>
+</section>
+</section>
+<section id="visualizing-data" class="level2">
+<h2 class="anchored" data-anchor-id="visualizing-data"><strong>4. Visualizing Data</strong></h2>
+<p>Choose graphs based on data type:</p>
+<ul>
+<li><p><strong>Numerical Data</strong>:</p>
+<ul>
+<li><em>Histograms</em>: Show distribution shape.<br>
+</li>
+<li><em>Boxplots</em>: Highlight median, quartiles, outliers.</li>
+</ul></li>
+<li><p><strong>Categorical Data</strong>:</p>
+<ul>
+<li><em>Bar charts</em>: Compare category frequencies.<br>
+</li>
+<li><em>Pie charts</em>: Show proportions (use sparingly!). ## <strong>1. Populations vs.&nbsp;Samples</strong></li>
+</ul></li>
+</ul>
 
 
 <script type="ojs-module-contents">
@@ -297,7 +324,6 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
-</section>
 </section>
 
 </main> <!-- /main -->

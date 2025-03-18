@@ -1,0 +1,64 @@
+---
+title: "Basics of Statistics"
+format: 
+  live-html:
+    theme:
+      light: [vapor, theme-light.scss]
+      dark: [simplex, theme-dark.scss]
+warning: false
+---
+
+## **1. Populations vs. Samples**  
+
+- **Population**: Entire group of interest (e.g., all SU undergraduate students, all cars in a parking lot).  
+- **Sample**: Subset of the population used for analysis.  
+- **Key criteria for a good sample**:  
+  - **Random**: Every experimental unit has an equal chance of being selected.  
+  - **Representative**: Reflects the population’s diversity (e.g., includes all genders, majors).  
+
+*Example*: To study SU students’ sleep habits, randomly select 200 students across all majors/years.  
+
+## **2. Variables & Data Types**  
+
+Variables describe experimental units (e.g., age, major, car color).  
+
+### **Numerical (Quantitative) Data** 
+
+- Expressed as numbers with units.  
+- *Examples*: Height (cm), exam scores, years of education.  
+
+### **Categorical (Qualitative) Data**  
+
+- Non-numeric labels or categories.  
+  - **Nominal**: No inherent order (e.g., gender, car color).  
+  - **Ordinal**: Ordered categories (e.g., product ratings: Poor, Fair, Good).  
+
+
+## **3. Summarizing Data**  
+
+### **Numerical Data**  
+
+- **Mean**: Average value:  
+  $\bar{x} = \frac{1}{n}\sum_{i=1}^n x_i$  
+- **Variance**: Spread around the mean:  
+  $s^2 = \frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})^2$  
+
+### **Categorical Data**  
+
+- Use **frequency counts** or **percentages** (e.g., 30% Biology majors, 70% Engineering).  
+
+
+## **4. Visualizing Data**  
+
+Choose graphs based on data type:  
+
+- **Numerical Data**:  
+
+  - *Histograms*: Show distribution shape.  
+  - *Boxplots*: Highlight median, quartiles, outliers.  
+  
+- **Categorical Data**:  
+
+  - *Bar charts*: Compare category frequencies.  
+  - *Pie charts*: Show proportions (use sparingly!). ## **1. Populations vs. Samples**  
+  
