@@ -3,8 +3,8 @@ title: "Basics of Statistics"
 format: 
   live-html:
     theme:
-      light: [vapor, theme-light.scss]
-      dark: [simplex, theme-dark.scss]
+      light: [lux, theme-light.scss]
+      dark: [superhero, theme-dark.scss]
 warning: false
 ---
 
@@ -60,5 +60,7 @@ Choose graphs based on data type:
 - **Categorical Data**:  
 
   - *Bar charts*: Compare category frequencies.  
-  - *Pie charts*: Show proportions (use sparingly!). ## **1. Populations vs. Samples**  
+  - *Pie charts*: Show proportions (use sparingly!). 
+  
+  
   

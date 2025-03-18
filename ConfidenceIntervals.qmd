@@ -3,8 +3,8 @@ title: "Confidence Intervals"
 format: 
   live-html:
     theme:
-      light: [vapor, theme-light.scss]
-      dark: [simplex, theme-dark.scss]
+      light: [lux, theme-light.scss]
+      dark: [superhero, theme-dark.scss]
 engine: knitr
 toc: true
 webr:

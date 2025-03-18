@@ -193,7 +193,7 @@
     "href": "basicstatistics.html#visualizing-data",
     "title": "Basics of Statistics",
     "section": "4. Visualizing Data",
-    "text": "4. Visualizing Data\nChoose graphs based on data type:\n\nNumerical Data:\n\nHistograms: Show distribution shape.\n\nBoxplots: Highlight median, quartiles, outliers.\n\nCategorical Data:\n\nBar charts: Compare category frequencies.\n\nPie charts: Show proportions (use sparingly!). ## 1. Populations vs. Samples"
+    "text": "4. Visualizing Data\nChoose graphs based on data type:\n\nNumerical Data:\n\nHistograms: Show distribution shape.\n\nBoxplots: Highlight median, quartiles, outliers.\n\nCategorical Data:\n\nBar charts: Compare category frequencies.\n\nPie charts: Show proportions (use sparingly!)."
   },
   {
     "objectID": "index.html",
