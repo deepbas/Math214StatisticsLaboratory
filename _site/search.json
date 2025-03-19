@@ -4,202 +4,315 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Laboratory activities to reinforce topics covered in MATH 155 or equivalent. To further study and apply the concepts of descriptive and inferential statistics in a hands-on setting using technology. One-hour credit: Meets two hours per week. Prerequisites: C or better in MATH 155 or equivalent.\n\n\n\nTo introduce the concepts of descriptive and inferential statistics in a hands-on setting."
+    "text": "Laboratory activities to reinforce topics covered in MATH 155 or equivalent. To further study and apply the concepts of descriptive and inferential statistics in a hands-on setting using technology. One-hour credit: Meets two hours per week. Prerequisites: C or better in MATH 155 or equivalent.\n\n\n\nTo introduce the concepts of descriptive and inferential statistics in a hands-on setting.",
+    "crumbs": [
+      "About"
+    ]
   },
   {
     "objectID": "about.html#learning-objectives",
     "href": "about.html#learning-objectives",
     "title": "About",
     "section": "",
-    "text": "To introduce the concepts of descriptive and inferential statistics in a hands-on setting."
+    "text": "To introduce the concepts of descriptive and inferential statistics in a hands-on setting.",
+    "crumbs": [
+      "About"
+    ]
   },
   {
     "objectID": "usdata.html",
     "href": "usdata.html",
     "title": "Dataset 1: US States data",
     "section": "",
-    "text": "Download raw data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nAbbreviation\nRegion\nDivision\nPopulation\nIncome\nIlliteracy\nLifeExp\nMurder\nHS_Grad\nFrost\nArea\n\n\n\nAlabama\nAL\nSouth\nEast South Central\n3615\n3624\n2.1\n69.05\n15.1\n41.3\n20\n50708\n\n\nAlaska\nAK\nWest\nPacific\n365\n6315\n1.5\n69.31\n11.3\n66.7\n152\n566432\n\n\nArizona\nAZ\nWest\nMountain\n2212\n4530\n1.8\n70.55\n7.8\n58.1\n15\n113417\n\n\nArkansas\nAR\nSouth\nWest South Central\n2110\n3378\n1.9\n70.66\n10.1\n39.9\n65\n51945\n\n\nCalifornia\nCA\nWest\nPacific\n21198\n5114\n1.1\n71.71\n10.3\n62.6\n20\n156361\n\n\nColorado\nCO\nWest\nMountain\n2541\n4884\n0.7\n72.06\n6.8\n63.9\n166\n103766\n\n\nConnecticut\nCT\nNortheast\nNew England\n3100\n5348\n1.1\n72.48\n3.1\n56.0\n139\n4862\n\n\nDelaware\nDE\nSouth\nSouth Atlantic\n579\n4809\n0.9\n70.06\n6.2\n54.6\n103\n1982\n\n\nFlorida\nFL\nSouth\nSouth Atlantic\n8277\n4815\n1.3\n70.66\n10.7\n52.6\n11\n54090\n\n\nGeorgia\nGA\nSouth\nSouth Atlantic\n4931\n4091\n2.0\n68.54\n13.9\n40.6\n60\n58073\n\n\nHawaii\nHI\nWest\nPacific\n868\n4963\n1.9\n73.60\n6.2\n61.9\n0\n6425\n\n\nIdaho\nID\nWest\nMountain\n813\n4119\n0.6\n71.87\n5.3\n59.5\n126\n82677\n\n\nIllinois\nIL\nNorth Central\nEast North Central\n11197\n5107\n0.9\n70.14\n10.3\n52.6\n127\n55748\n\n\nIndiana\nIN\nNorth Central\nEast North Central\n5313\n4458\n0.7\n70.88\n7.1\n52.9\n122\n36097\n\n\nIowa\nIA\nNorth Central\nWest North Central\n2861\n4628\n0.5\n72.56\n2.3\n59.0\n140\n55941\n\n\nKansas\nKS\nNorth Central\nWest North Central\n2280\n4669\n0.6\n72.58\n4.5\n59.9\n114\n81787\n\n\nKentucky\nKY\nSouth\nEast South Central\n3387\n3712\n1.6\n70.10\n10.6\n38.5\n95\n39650\n\n\nLouisiana\nLA\nSouth\nWest South Central\n3806\n3545\n2.8\n68.76\n13.2\n42.2\n12\n44930\n\n\nMaine\nME\nNortheast\nNew England\n1058\n3694\n0.7\n70.39\n2.7\n54.7\n161\n30920\n\n\nMaryland\nMD\nSouth\nSouth Atlantic\n4122\n5299\n0.9\n70.22\n8.5\n52.3\n101\n9891\n\n\nMassachusetts\nMA\nNortheast\nNew England\n5814\n4755\n1.1\n71.83\n3.3\n58.5\n103\n7826\n\n\nMichigan\nMI\nNorth Central\nEast North Central\n9111\n4751\n0.9\n70.63\n11.1\n52.8\n125\n56817\n\n\nMinnesota\nMN\nNorth Central\nWest North Central\n3921\n4675\n0.6\n72.96\n2.3\n57.6\n160\n79289\n\n\nMississippi\nMS\nSouth\nEast South Central\n2341\n3098\n2.4\n68.09\n12.5\n41.0\n50\n47296\n\n\nMissouri\nMO\nNorth Central\nWest North Central\n4767\n4254\n0.8\n70.69\n9.3\n48.8\n108\n68995\n\n\nMontana\nMT\nWest\nMountain\n746\n4347\n0.6\n70.56\n5.0\n59.2\n155\n145587\n\n\nNebraska\nNE\nNorth Central\nWest North Central\n1544\n4508\n0.6\n72.60\n2.9\n59.3\n139\n76483\n\n\nNevada\nNV\nWest\nMountain\n590\n5149\n0.5\n69.03\n11.5\n65.2\n188\n109889\n\n\nNew Hampshire\nNH\nNortheast\nNew England\n812\n4281\n0.7\n71.23\n3.3\n57.6\n174\n9027\n\n\nNew Jersey\nNJ\nNortheast\nMiddle Atlantic\n7333\n5237\n1.1\n70.93\n5.2\n52.5\n115\n7521\n\n\nNew Mexico\nNM\nWest\nMountain\n1144\n3601\n2.2\n70.32\n9.7\n55.2\n120\n121412\n\n\nNew York\nNY\nNortheast\nMiddle Atlantic\n18076\n4903\n1.4\n70.55\n10.9\n52.7\n82\n47831\n\n\nNorth Carolina\nNC\nSouth\nSouth Atlantic\n5441\n3875\n1.8\n69.21\n11.1\n38.5\n80\n48798\n\n\nNorth Dakota\nND\nNorth Central\nWest North Central\n637\n5087\n0.8\n72.78\n1.4\n50.3\n186\n69273\n\n\nOhio\nOH\nNorth Central\nEast North Central\n10735\n4561\n0.8\n70.82\n7.4\n53.2\n124\n40975\n\n\nOklahoma\nOK\nSouth\nWest South Central\n2715\n3983\n1.1\n71.42\n6.4\n51.6\n82\n68782\n\n\nOregon\nOR\nWest\nPacific\n2284\n4660\n0.6\n72.13\n4.2\n60.0\n44\n96184\n\n\nPennsylvania\nPA\nNortheast\nMiddle Atlantic\n11860\n4449\n1.0\n70.43\n6.1\n50.2\n126\n44966\n\n\nRhode Island\nRI\nNortheast\nNew England\n931\n4558\n1.3\n71.90\n2.4\n46.4\n127\n1049\n\n\nSouth Carolina\nSC\nSouth\nSouth Atlantic\n2816\n3635\n2.3\n67.96\n11.6\n37.8\n65\n30225\n\n\nSouth Dakota\nSD\nNorth Central\nWest North Central\n681\n4167\n0.5\n72.08\n1.7\n53.3\n172\n75955\n\n\nTennessee\nTN\nSouth\nEast South Central\n4173\n3821\n1.7\n70.11\n11.0\n41.8\n70\n41328\n\n\nTexas\nTX\nSouth\nWest South Central\n12237\n4188\n2.2\n70.90\n12.2\n47.4\n35\n262134\n\n\nUtah\nUT\nWest\nMountain\n1203\n4022\n0.6\n72.90\n4.5\n67.3\n137\n82096\n\n\nVermont\nVT\nNortheast\nNew England\n472\n3907\n0.6\n71.64\n5.5\n57.1\n168\n9267\n\n\nVirginia\nVA\nSouth\nSouth Atlantic\n4981\n4701\n1.4\n70.08\n9.5\n47.8\n85\n39780\n\n\nWashington\nWA\nWest\nPacific\n3559\n4864\n0.6\n71.72\n4.3\n63.5\n32\n66570\n\n\nWest Virginia\nWV\nSouth\nSouth Atlantic\n1799\n3617\n1.4\n69.48\n6.7\n41.6\n100\n24070\n\n\nWisconsin\nWI\nNorth Central\nEast North Central\n4589\n4468\n0.7\n72.48\n3.0\n54.5\n149\n54464\n\n\nWyoming\nWY\nWest\nMountain\n376\n4566\n0.6\n70.29\n6.9\n62.9\n173\n97203"
+    "text": "Download raw data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nAbbreviation\nRegion\nDivision\nPopulation\nIncome\nIlliteracy\nLifeExp\nMurder\nHS_Grad\nFrost\nArea\n\n\n\nAlabama\nAL\nSouth\nEast South Central\n3615\n3624\n2.1\n69.05\n15.1\n41.3\n20\n50708\n\n\nAlaska\nAK\nWest\nPacific\n365\n6315\n1.5\n69.31\n11.3\n66.7\n152\n566432\n\n\nArizona\nAZ\nWest\nMountain\n2212\n4530\n1.8\n70.55\n7.8\n58.1\n15\n113417\n\n\nArkansas\nAR\nSouth\nWest South Central\n2110\n3378\n1.9\n70.66\n10.1\n39.9\n65\n51945\n\n\nCalifornia\nCA\nWest\nPacific\n21198\n5114\n1.1\n71.71\n10.3\n62.6\n20\n156361\n\n\nColorado\nCO\nWest\nMountain\n2541\n4884\n0.7\n72.06\n6.8\n63.9\n166\n103766\n\n\nConnecticut\nCT\nNortheast\nNew England\n3100\n5348\n1.1\n72.48\n3.1\n56.0\n139\n4862\n\n\nDelaware\nDE\nSouth\nSouth Atlantic\n579\n4809\n0.9\n70.06\n6.2\n54.6\n103\n1982\n\n\nFlorida\nFL\nSouth\nSouth Atlantic\n8277\n4815\n1.3\n70.66\n10.7\n52.6\n11\n54090\n\n\nGeorgia\nGA\nSouth\nSouth Atlantic\n4931\n4091\n2.0\n68.54\n13.9\n40.6\n60\n58073\n\n\nHawaii\nHI\nWest\nPacific\n868\n4963\n1.9\n73.60\n6.2\n61.9\n0\n6425\n\n\nIdaho\nID\nWest\nMountain\n813\n4119\n0.6\n71.87\n5.3\n59.5\n126\n82677\n\n\nIllinois\nIL\nNorth Central\nEast North Central\n11197\n5107\n0.9\n70.14\n10.3\n52.6\n127\n55748\n\n\nIndiana\nIN\nNorth Central\nEast North Central\n5313\n4458\n0.7\n70.88\n7.1\n52.9\n122\n36097\n\n\nIowa\nIA\nNorth Central\nWest North Central\n2861\n4628\n0.5\n72.56\n2.3\n59.0\n140\n55941\n\n\nKansas\nKS\nNorth Central\nWest North Central\n2280\n4669\n0.6\n72.58\n4.5\n59.9\n114\n81787\n\n\nKentucky\nKY\nSouth\nEast South Central\n3387\n3712\n1.6\n70.10\n10.6\n38.5\n95\n39650\n\n\nLouisiana\nLA\nSouth\nWest South Central\n3806\n3545\n2.8\n68.76\n13.2\n42.2\n12\n44930\n\n\nMaine\nME\nNortheast\nNew England\n1058\n3694\n0.7\n70.39\n2.7\n54.7\n161\n30920\n\n\nMaryland\nMD\nSouth\nSouth Atlantic\n4122\n5299\n0.9\n70.22\n8.5\n52.3\n101\n9891\n\n\nMassachusetts\nMA\nNortheast\nNew England\n5814\n4755\n1.1\n71.83\n3.3\n58.5\n103\n7826\n\n\nMichigan\nMI\nNorth Central\nEast North Central\n9111\n4751\n0.9\n70.63\n11.1\n52.8\n125\n56817\n\n\nMinnesota\nMN\nNorth Central\nWest North Central\n3921\n4675\n0.6\n72.96\n2.3\n57.6\n160\n79289\n\n\nMississippi\nMS\nSouth\nEast South Central\n2341\n3098\n2.4\n68.09\n12.5\n41.0\n50\n47296\n\n\nMissouri\nMO\nNorth Central\nWest North Central\n4767\n4254\n0.8\n70.69\n9.3\n48.8\n108\n68995\n\n\nMontana\nMT\nWest\nMountain\n746\n4347\n0.6\n70.56\n5.0\n59.2\n155\n145587\n\n\nNebraska\nNE\nNorth Central\nWest North Central\n1544\n4508\n0.6\n72.60\n2.9\n59.3\n139\n76483\n\n\nNevada\nNV\nWest\nMountain\n590\n5149\n0.5\n69.03\n11.5\n65.2\n188\n109889\n\n\nNew Hampshire\nNH\nNortheast\nNew England\n812\n4281\n0.7\n71.23\n3.3\n57.6\n174\n9027\n\n\nNew Jersey\nNJ\nNortheast\nMiddle Atlantic\n7333\n5237\n1.1\n70.93\n5.2\n52.5\n115\n7521\n\n\nNew Mexico\nNM\nWest\nMountain\n1144\n3601\n2.2\n70.32\n9.7\n55.2\n120\n121412\n\n\nNew York\nNY\nNortheast\nMiddle Atlantic\n18076\n4903\n1.4\n70.55\n10.9\n52.7\n82\n47831\n\n\nNorth Carolina\nNC\nSouth\nSouth Atlantic\n5441\n3875\n1.8\n69.21\n11.1\n38.5\n80\n48798\n\n\nNorth Dakota\nND\nNorth Central\nWest North Central\n637\n5087\n0.8\n72.78\n1.4\n50.3\n186\n69273\n\n\nOhio\nOH\nNorth Central\nEast North Central\n10735\n4561\n0.8\n70.82\n7.4\n53.2\n124\n40975\n\n\nOklahoma\nOK\nSouth\nWest South Central\n2715\n3983\n1.1\n71.42\n6.4\n51.6\n82\n68782\n\n\nOregon\nOR\nWest\nPacific\n2284\n4660\n0.6\n72.13\n4.2\n60.0\n44\n96184\n\n\nPennsylvania\nPA\nNortheast\nMiddle Atlantic\n11860\n4449\n1.0\n70.43\n6.1\n50.2\n126\n44966\n\n\nRhode Island\nRI\nNortheast\nNew England\n931\n4558\n1.3\n71.90\n2.4\n46.4\n127\n1049\n\n\nSouth Carolina\nSC\nSouth\nSouth Atlantic\n2816\n3635\n2.3\n67.96\n11.6\n37.8\n65\n30225\n\n\nSouth Dakota\nSD\nNorth Central\nWest North Central\n681\n4167\n0.5\n72.08\n1.7\n53.3\n172\n75955\n\n\nTennessee\nTN\nSouth\nEast South Central\n4173\n3821\n1.7\n70.11\n11.0\n41.8\n70\n41328\n\n\nTexas\nTX\nSouth\nWest South Central\n12237\n4188\n2.2\n70.90\n12.2\n47.4\n35\n262134\n\n\nUtah\nUT\nWest\nMountain\n1203\n4022\n0.6\n72.90\n4.5\n67.3\n137\n82096\n\n\nVermont\nVT\nNortheast\nNew England\n472\n3907\n0.6\n71.64\n5.5\n57.1\n168\n9267\n\n\nVirginia\nVA\nSouth\nSouth Atlantic\n4981\n4701\n1.4\n70.08\n9.5\n47.8\n85\n39780\n\n\nWashington\nWA\nWest\nPacific\n3559\n4864\n0.6\n71.72\n4.3\n63.5\n32\n66570\n\n\nWest Virginia\nWV\nSouth\nSouth Atlantic\n1799\n3617\n1.4\n69.48\n6.7\n41.6\n100\n24070\n\n\nWisconsin\nWI\nNorth Central\nEast North Central\n4589\n4468\n0.7\n72.48\n3.0\n54.5\n149\n54464\n\n\nWyoming\nWY\nWest\nMountain\n376\n4566\n0.6\n70.29\n6.9\n62.9\n173\n97203",
+    "crumbs": [
+      "Datasets",
+      "Dataset1"
+    ]
   },
   {
     "objectID": "RandRStudio.html",
     "href": "RandRStudio.html",
     "title": "Setting Up R and RStudio",
     "section": "",
-    "text": "This lab tutorial will guide you through installing R and RStudio on your computer, managing packages, and loading data into R. This setup is essential for performing all kinds of data analysis tasks in R."
+    "text": "This lab tutorial will guide you through installing R and RStudio on your computer, managing packages, and loading data into R. This setup is essential for performing all kinds of data analysis tasks in R.",
+    "crumbs": [
+      "Tutorials",
+      "R and RStudio"
+    ]
   },
   {
     "objectID": "RandRStudio.html#on-windows",
     "href": "RandRStudio.html#on-windows",
     "title": "Setting Up R and RStudio",
     "section": "On Windows",
-    "text": "On Windows\n\n\nDownload R:\n\nVisit CRAN and download the latest version of R for Windows.\nRun the downloaded .exe file and follow the installation instructions.\n\n\n\n\n\nCRAN mirror\nDownload Latest R\nExecutable File in Downloads Folder\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDownload RStudio:\n\nGo to the RStudio Download page and download the free version of RStudio Desktop for Windows.\nInstall it by running the downloaded .exe file.\n\n\n\n\n\nDownload Latest RStudio\nExecutable File in Downloads Folder"
+    "text": "On Windows\n\n\nDownload R:\n\nVisit CRAN and download the latest version of R for Windows.\nRun the downloaded .exe file and follow the installation instructions.\n\n\n\n\n\nCRAN mirror\nDownload Latest R\nExecutable File in Downloads Folder\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDownload RStudio:\n\nGo to the RStudio Download page and download the free version of RStudio Desktop for Windows.\nInstall it by running the downloaded .exe file.\n\n\n\n\n\nDownload Latest RStudio\nExecutable File in Downloads Folder",
+    "crumbs": [
+      "Tutorials",
+      "R and RStudio"
+    ]
   },
   {
     "objectID": "RandRStudio.html#on-mac",
     "href": "RandRStudio.html#on-mac",
     "title": "Setting Up R and RStudio",
     "section": "On Mac",
-    "text": "On Mac\n\n\nDownload R:\n\nNavigate to CRAN and choose the version for macOS.\nOpen the downloaded .pkg file to start the installation.\n\n\n\n\n\nCRAN mirror\nDownload Latest R\nExecutable File in Downloads Folder\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDownload RStudio:\n\nVisit RStudio Download page and select RStudio for macOS.\nOpen the downloaded .dmg file and drag RStudio to your Applications folder.\n\n\n\n\n\nDownload Latest RStudio\nExecutable File in Downloads Folder"
+    "text": "On Mac\n\n\nDownload R:\n\nNavigate to CRAN and choose the version for macOS.\nOpen the downloaded .pkg file to start the installation.\n\n\n\n\n\nCRAN mirror\nDownload Latest R\nExecutable File in Downloads Folder\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDownload RStudio:\n\nVisit RStudio Download page and select RStudio for macOS.\nOpen the downloaded .dmg file and drag RStudio to your Applications folder.\n\n\n\n\n\nDownload Latest RStudio\nExecutable File in Downloads Folder",
+    "crumbs": [
+      "Tutorials",
+      "R and RStudio"
+    ]
   },
   {
     "objectID": "RandRStudio.html#rmarkdown-interface-components",
     "href": "RandRStudio.html#rmarkdown-interface-components",
     "title": "Setting Up R and RStudio",
     "section": "RMarkdown Interface Components",
-    "text": "RMarkdown Interface Components\nRStudio’s interface for working with RMarkdown documents contains four key panes:\n\nSource Editor (Left Pane)\nPrimary workspace for writing .Rmd files with integrated code chunks and narrative text. Features syntax highlighting, chunk controls (run individual code blocks), and document structure navigation.\n\nEnvironment/History (Top-Right Pane)\n\n\nEnvironment: Lists active datasets, variables, and functions\n\n\nHistory: Tracks all executed commands\n\n\nConnections: Manages database links (when used)\n\n\nGit: Version control integration (when configured)\n\n\n\nConsole/Terminal (Bottom-Left Pane)\n\n\nConsole: Direct R code execution environment showing raw output\n\n\nTerminal: System-level command line access\n\n\nBackground Jobs: Monitor long-running processes\n\n\n\nViewer/Help (Bottom-Right Pane)\n\n\nViewer: Preview rendered documents (HTML/PDF/Word)\n\n\nHelp: Access function documentation\n\n\nFiles: Navigate project directory structure\n\n\nPlots: Display graphical output\n\n\nPackages: Manage installed R packages"
+    "text": "RMarkdown Interface Components\nRStudio’s interface for working with RMarkdown documents contains four key panes:\n\nSource Editor (Left Pane)\nPrimary workspace for writing .Rmd files with integrated code chunks and narrative text. Features syntax highlighting, chunk controls (run individual code blocks), and document structure navigation.\n\nEnvironment/History (Top-Right Pane)\n\n\nEnvironment: Lists active datasets, variables, and functions\n\n\nHistory: Tracks all executed commands\n\n\nConnections: Manages database links (when used)\n\n\nGit: Version control integration (when configured)\n\n\n\nConsole/Terminal (Bottom-Left Pane)\n\n\nConsole: Direct R code execution environment showing raw output\n\n\nTerminal: System-level command line access\n\n\nBackground Jobs: Monitor long-running processes\n\n\n\nViewer/Help (Bottom-Right Pane)\n\n\nViewer: Preview rendered documents (HTML/PDF/Word)\n\n\nHelp: Access function documentation\n\n\nFiles: Navigate project directory structure\n\n\nPlots: Display graphical output\n\n\nPackages: Manage installed R packages",
+    "crumbs": [
+      "Tutorials",
+      "R and RStudio"
+    ]
   },
   {
     "objectID": "RandRStudio.html#understanding-r-markdown-documents",
     "href": "RandRStudio.html#understanding-r-markdown-documents",
     "title": "Setting Up R and RStudio",
     "section": "Understanding R Markdown Documents",
-    "text": "Understanding R Markdown Documents\nR Markdown allows you to integrate code and text in the same document, facilitating reproducible research and interactive data analysis reports. Here’s a quick overview:"
+    "text": "Understanding R Markdown Documents\nR Markdown allows you to integrate code and text in the same document, facilitating reproducible research and interactive data analysis reports. Here’s a quick overview:",
+    "crumbs": [
+      "Tutorials",
+      "R and RStudio"
+    ]
   },
   {
     "objectID": "RandRStudio.html#managing-.rmd-files-and-setting-the-working-directory",
     "href": "RandRStudio.html#managing-.rmd-files-and-setting-the-working-directory",
     "title": "Setting Up R and RStudio",
     "section": "Managing .Rmd Files and Setting the Working Directory",
-    "text": "Managing .Rmd Files and Setting the Working Directory\nDownloading and Organizing .Rmd Files\nTo effectively manage your course materials in RStudio, follow these steps:\n\n\nDownload .Rmd File:\n\nNavigate to MyClasses and locate the desired .Rmd file for your course.\nDownload the file to your local machine.\n\n\n\nCreate a Course Folder:\n\nCreate a new folder named math214 in a suitable location on your computer or within your OneDrive account.\n\n\n\nOrganize Files:\n\nMove the downloaded .Rmd file into the math214 folder to keep your course materials organized."
+    "text": "Managing .Rmd Files and Setting the Working Directory\nDownloading and Organizing .Rmd Files\nTo effectively manage your course materials in RStudio, follow these steps:\n\n\nDownload .Rmd File:\n\nNavigate to MyClasses and locate the desired .Rmd file for your course.\nDownload the file to your local machine.\n\n\n\nCreate a Course Folder:\n\nCreate a new folder named math214 in a suitable location on your computer or within your OneDrive account.\n\n\n\nOrganize Files:\n\nMove the downloaded .Rmd file into the math214 folder to keep your course materials organized.",
+    "crumbs": [
+      "Tutorials",
+      "R and RStudio"
+    ]
   },
   {
     "objectID": "RandRStudio.html#text-formatting-in-r-markdown",
     "href": "RandRStudio.html#text-formatting-in-r-markdown",
     "title": "Setting Up R and RStudio",
     "section": "Text Formatting in R Markdown",
-    "text": "Text Formatting in R Markdown\nMarkdown is a lightweight markup language that allows you to add formatting elements using plain text. Here’s how you can use different Markdown syntax to format text within your R Markdown documents.\nHeaders\nCreate headers by prefixing the text with one or more hash symbols (#). The number of # symbols before the text determines the level of the header.\n# Header 1\n## Header 2\n### Header 3\nLists\nYou can create bulleted or numbered lists:\n\n\nUnordered Lists (bullets):\n\n- Item 1\n- Item 2\n  - Subitem 1\n  - Subitem 2\n\n\nOrdered Lists:\n\n1. First item\n2. Second item\n   1. Subitem 1\n   2. Subitem 2\nLinks\nInclude hyperlinks using the format [link text](URL):\n[Visit Canvas](https://salisbury.instructure.com/courses/71470)\nEmphasis\nItalicize or bold text using asterisks or underscores:\n\n\nItalic: *Italic* or _Italic_\n\n\nBold: **Bold** or __Bold__\n\nImages\nEmbed images using the format ![Alt text](image_URL \"Optional Title\"):\n![Example Image](path_to_image.jpg \"This is an image\")\nBlockquotes\nCreate blockquotes with &gt;:\n&gt; This is a blockquote.\nCode\nDisplay inline code with backticks and code blocks with triple backticks:\n\nInline code: `code`\n\nCode block:\n\n\n\n\n\n\n\n\n\n\n\n[1] -5\n\n\nHorizontal Rules\nInsert a horizontal line with three or more hyphens:\n---\nCombining Markdown with R Code\nMarkdown can be interleaved with executable R code chunks:\n\n# Calculate the sum of numbers from 1 to 10\nsum(1:10)\n\n[1] 55"
+    "text": "Text Formatting in R Markdown\nMarkdown is a lightweight markup language that allows you to add formatting elements using plain text. Here’s how you can use different Markdown syntax to format text within your R Markdown documents.\nHeaders\nCreate headers by prefixing the text with one or more hash symbols (#). The number of # symbols before the text determines the level of the header.\n# Header 1\n## Header 2\n### Header 3\nLists\nYou can create bulleted or numbered lists:\n\n\nUnordered Lists (bullets):\n\n- Item 1\n- Item 2\n  - Subitem 1\n  - Subitem 2\n\n\nOrdered Lists:\n\n1. First item\n2. Second item\n   1. Subitem 1\n   2. Subitem 2\nLinks\nInclude hyperlinks using the format [link text](URL):\n[Visit Canvas](https://salisbury.instructure.com/courses/71470)\nEmphasis\nItalicize or bold text using asterisks or underscores:\n\n\nItalic: *Italic* or _Italic_\n\n\nBold: **Bold** or __Bold__\n\nImages\nEmbed images using the format ![Alt text](image_URL \"Optional Title\"):\n![Example Image](path_to_image.jpg \"This is an image\")\nBlockquotes\nCreate blockquotes with &gt;:\n&gt; This is a blockquote.\nCode\nDisplay inline code with backticks and code blocks with triple backticks:\n\nInline code: `code`\n\nCode block:\n\n\n\n\n\n\n\n\n\n\n\n[1] -5\n\n\nHorizontal Rules\nInsert a horizontal line with three or more hyphens:\n---\nCombining Markdown with R Code\nMarkdown can be interleaved with executable R code chunks:\n\n# Calculate the sum of numbers from 1 to 10\nsum(1:10)\n\n[1] 55",
+    "crumbs": [
+      "Tutorials",
+      "R and RStudio"
+    ]
   },
   {
     "objectID": "RandRStudio.html#r-code-chunk-options",
     "href": "RandRStudio.html#r-code-chunk-options",
     "title": "Setting Up R and RStudio",
     "section": "R Code Chunk Options",
-    "text": "R Code Chunk Options\nBefore diving into data loading, let’s understand important R chunk options:\n\n\neval: Use eval=FALSE to prevent code from running but still display it.\n\necho: With echo=FALSE, the code is run but not displayed in the document.\n\ninclude: include=FALSE runs the code and hides both the code and output from the final output.\n\nExample to demonstrate:\n\n\n\n\n\n\n\n\n\n# This code will run, and both code and output will appear in the document.\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00  \n\n\nSetting the Working Directory\nIt’s crucial to set the working directory in R to the folder where your course files are stored. This can be done in several ways:\n\n\nUsing RStudio:\n\nIn RStudio, you can set the working directory through the menu by navigating to Session &gt; Set Working Directory &gt; Choose Directory... and selecting your math214 folder.\n\n\n\nUsing R Script:\n\nYou can also set the working directory directly in an R script using the setwd() function. Place the following line of code at the beginning of your script:\n\nsetwd(\"~/math214\")\nReplace \"~/math214\" with the actual path to your course folder.\n\n\nUsing R Console:\n\nYou can manually set the working directory in the R console with the same command:\n\nsetwd(\"~/math214\")"
+    "text": "R Code Chunk Options\nBefore diving into data loading, let’s understand important R chunk options:\n\n\neval: Use eval=FALSE to prevent code from running but still display it.\n\necho: With echo=FALSE, the code is run but not displayed in the document.\n\ninclude: include=FALSE runs the code and hides both the code and output from the final output.\n\nExample to demonstrate:\n\n\n\n\n\n\n\n\n\n# This code will run, and both code and output will appear in the document.\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00  \n\n\nSetting the Working Directory\nIt’s crucial to set the working directory in R to the folder where your course files are stored. This can be done in several ways:\n\n\nUsing RStudio:\n\nIn RStudio, you can set the working directory through the menu by navigating to Session &gt; Set Working Directory &gt; Choose Directory... and selecting your math214 folder.\n\n\n\nUsing R Script:\n\nYou can also set the working directory directly in an R script using the setwd() function. Place the following line of code at the beginning of your script:\n\nsetwd(\"~/math214\")\nReplace \"~/math214\" with the actual path to your course folder.\n\n\nUsing R Console:\n\nYou can manually set the working directory in the R console with the same command:\n\nsetwd(\"~/math214\")",
+    "crumbs": [
+      "Tutorials",
+      "R and RStudio"
+    ]
   },
   {
     "objectID": "ConfidenceIntervals.html",
     "href": "ConfidenceIntervals.html",
     "title": "Confidence Intervals",
     "section": "",
-    "text": "Confidence intervals estimate unknown population parameters (e.g., a mean \\(\\mu\\) or proportion) using sample data. While a point estimator like the sample mean \\(\\bar{X}\\) provides a single-value estimate, it lacks a measure of reliability. An interval estimator (confidence interval) addresses this by producing a range of values with an associated confidence level (e.g., 95%). This confidence level reflects the long-run success rate of the method: if we repeatedly sampled the population and constructed intervals, 95% of those intervals would contain the true parameter. This “repeated sampling” interpretation emphasizes that the confidence level describes the method’s reliability, not the probability that a single interval contains the parameter.\nTo illustrate, let’s simulate 95% confidence intervals for a population mean \\(\\mu = 50\\) using R. We’ll generate 50 samples (each with \\(n=30\\) observations) from a normal distribution, compute their confidence intervals, and visualize results. Plotting these intervals shows most (≈95%) capture \\(\\mu\\), while a few miss it – mirroring the confidence level’s meaning. The proportion of intervals containing \\(\\mu\\) will typically hover near 0.95, with deviations due to random sampling.\n\n\n\n\n\n\n\n\nKey insights:\n\nA 95% CI does not mean “there’s a 95% chance \\(\\mu\\) lies in this interval” – \\(\\mu\\) is fixed, and the interval either contains it or not.\n\nCoverage depends on assumptions (e.g., normality via CLT for small \\(n\\); less critical for \\(n \\geq 30\\)).\n\nIn practice, you only compute one interval, but its reliability is tied to the theoretical behavior of many intervals."
+    "text": "Confidence intervals estimate unknown population parameters (e.g., a mean \\(\\mu\\) or proportion) using sample data. While a point estimator like the sample mean \\(\\bar{X}\\) provides a single-value estimate, it lacks a measure of reliability. An interval estimator (confidence interval) addresses this by producing a range of values with an associated confidence level (e.g., 95%). This confidence level reflects the long-run success rate of the method: if we repeatedly sampled the population and constructed intervals, 95% of those intervals would contain the true parameter. This “repeated sampling” interpretation emphasizes that the confidence level describes the method’s reliability, not the probability that a single interval contains the parameter.\nTo illustrate, let’s simulate 95% confidence intervals for a population mean \\(\\mu = 50\\) using R. We’ll generate 50 samples (each with \\(n=30\\) observations) from a normal distribution, compute their confidence intervals, and visualize results. Plotting these intervals shows most (≈95%) capture \\(\\mu\\), while a few miss it – mirroring the confidence level’s meaning. The proportion of intervals containing \\(\\mu\\) will typically hover near 0.95, with deviations due to random sampling.\n\n\n\n\n\n\n\n\nKey insights:\n\nA 95% CI does not mean “there’s a 95% chance \\(\\mu\\) lies in this interval” – \\(\\mu\\) is fixed, and the interval either contains it or not.\n\nCoverage depends on assumptions (e.g., normality via CLT for small \\(n\\); less critical for \\(n \\geq 30\\)).\n\nIn practice, you only compute one interval, but its reliability is tied to the theoretical behavior of many intervals.",
+    "crumbs": [
+      "Theory",
+      "Confidence Intervals"
+    ]
   },
   {
     "objectID": "continuousRV.html",
     "href": "continuousRV.html",
     "title": "Continuous Random Variables",
     "section": "",
-    "text": "A continuous random variable can take infinitely many values, and its outcomes cannot be counted individually. Instead of listing outcomes, we describe its behavior using a probability density function (pdf) where the area under the curve represents probabilities."
+    "text": "A continuous random variable can take infinitely many values, and its outcomes cannot be counted individually. Instead of listing outcomes, we describe its behavior using a probability density function (pdf) where the area under the curve represents probabilities.",
+    "crumbs": [
+      "Theory",
+      "Continuous Random Variables"
+    ]
   },
   {
     "objectID": "continuousRV.html#density-curves",
     "href": "continuousRV.html#density-curves",
     "title": "Continuous Random Variables",
     "section": "Density Curves",
-    "text": "Density Curves\nA density curve must satisfy: 1. The total area under the curve equals 1. 2. Every point on the curve has a non-negative height (i.e., the curve does not fall below the \\(x\\)-axis)."
+    "text": "Density Curves\nA density curve must satisfy: 1. The total area under the curve equals 1. 2. Every point on the curve has a non-negative height (i.e., the curve does not fall below the \\(x\\)-axis).",
+    "crumbs": [
+      "Theory",
+      "Continuous Random Variables"
+    ]
   },
   {
     "objectID": "continuousRV.html#common-continuous-distributions",
     "href": "continuousRV.html#common-continuous-distributions",
     "title": "Continuous Random Variables",
     "section": "Common Continuous Distributions",
-    "text": "Common Continuous Distributions\n\nUniform Distribution\nA continuous random variable has a uniform distribution if its values are evenly spread over the interval \\([a,b]\\). Its density function is given by:\n\\[\n\\begin{align}\nf(x)=\\frac{1}{b-a},\\quad \\text{for } a\\le x\\le b\n\\end{align}\n\\]\nThe mean and standard deviation are:\n\\[\n\\begin{align}\n\\mu &= \\frac{a+b}{2},\\\\[1em]\n\\sigma &= \\frac{b-a}{\\sqrt{12}}\n\\end{align}\n\\]\n\n\nNormal Distribution\nThe normal distribution is symmetric and bell-shaped, described by the equation:\n\\[\n\\begin{align}\nf(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}} \\exp\\left(-\\frac{(x-\\mu)^2}{2\\sigma^2}\\right)\n\\end{align}\n\\]\nHere, \\(\\mu\\) is the mean and \\(\\sigma\\) is the standard deviation. A special case with \\(\\mu=0\\) and \\(\\sigma=1\\) is called the standard normal distribution.\n\n\nExponential Distribution\nThe exponential distribution, often referred to as the waiting-time distribution, has the density function:\n\\[\n\\begin{align}\nf(x)=\\frac{1}{\\theta} \\exp\\left(-\\frac{x}{\\theta}\\right),\\quad \\text{for } x\\ge0\n\\end{align}\n\\]\nIn this case, both the mean and the standard deviation are equal to \\(\\theta\\):\n\\[\n\\begin{align}\n\\mu &= \\theta,\\\\[1em]\n\\sigma &= \\theta\n\\end{align}\n\\]"
+    "text": "Common Continuous Distributions\n\nUniform Distribution\nA continuous random variable has a uniform distribution if its values are evenly spread over the interval \\([a,b]\\). Its density function is given by:\n\\[\n\\begin{align}\nf(x)=\\frac{1}{b-a},\\quad \\text{for } a\\le x\\le b\n\\end{align}\n\\]\nThe mean and standard deviation are:\n\\[\n\\begin{align}\n\\mu &= \\frac{a+b}{2},\\\\[1em]\n\\sigma &= \\frac{b-a}{\\sqrt{12}}\n\\end{align}\n\\]\n\n\nNormal Distribution\nThe normal distribution is symmetric and bell-shaped, described by the equation:\n\\[\n\\begin{align}\nf(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}} \\exp\\left(-\\frac{(x-\\mu)^2}{2\\sigma^2}\\right)\n\\end{align}\n\\]\nHere, \\(\\mu\\) is the mean and \\(\\sigma\\) is the standard deviation. A special case with \\(\\mu=0\\) and \\(\\sigma=1\\) is called the standard normal distribution.\n\n\nExponential Distribution\nThe exponential distribution, often referred to as the waiting-time distribution, has the density function:\n\\[\n\\begin{align}\nf(x)=\\frac{1}{\\theta} \\exp\\left(-\\frac{x}{\\theta}\\right),\\quad \\text{for } x\\ge0\n\\end{align}\n\\]\nIn this case, both the mean and the standard deviation are equal to \\(\\theta\\):\n\\[\n\\begin{align}\n\\mu &= \\theta,\\\\[1em]\n\\sigma &= \\theta\n\\end{align}\n\\]",
+    "crumbs": [
+      "Theory",
+      "Continuous Random Variables"
+    ]
   },
   {
     "objectID": "discreteRV.html",
     "href": "discreteRV.html",
     "title": "Discrete Random Variables",
     "section": "",
-    "text": "In the next three lab assignments, students will review the concept of a random variable and its probability distribution. They will learn how to determine key parameters such as mean, variance, and standard deviation, and compute probabilities for different outcomes."
+    "text": "In the next three lab assignments, students will review the concept of a random variable and its probability distribution. They will learn how to determine key parameters such as mean, variance, and standard deviation, and compute probabilities for different outcomes.",
+    "crumbs": [
+      "Theory",
+      "Discrete Random Variables"
+    ]
   },
   {
     "objectID": "discreteRV.html#discrete-random-variables",
     "href": "discreteRV.html#discrete-random-variables",
     "title": "Discrete Random Variables",
     "section": "Discrete Random Variables",
-    "text": "Discrete Random Variables\nA random variable, typically denoted by \\(X\\), is a variable that takes on a numerical value determined by chance for each outcome of an experiment. A probability distribution provides the probability for each possible value of \\(X\\), often presented in a table, formula, or graph.\nExample: Suppose you flip a coin. If it lands on tails, you win $1; if it lands on heads, you win $0. Here, the random variable \\(X\\) has two values: 1 and 0. Since the outcomes are equally likely, the probability distribution is:\n\n\n\n\\(X\\)\n0\n1\n\n\n\n\n\\(P(X=x)\\)\n\\(1/2\\)\n\\(1/2\\)\n\n\n\nThis represents a discrete random variable, where the set of possible values is finite or countably infinite (e.g., the number of coin tosses before the first tail)."
+    "text": "Discrete Random Variables\nA random variable, typically denoted by \\(X\\), is a variable that takes on a numerical value determined by chance for each outcome of an experiment. A probability distribution provides the probability for each possible value of \\(X\\), often presented in a table, formula, or graph.\nExample: Suppose you flip a coin. If it lands on tails, you win $1; if it lands on heads, you win $0. Here, the random variable \\(X\\) has two values: 1 and 0. Since the outcomes are equally likely, the probability distribution is:\n\n\n\n\\(X\\)\n0\n1\n\n\n\n\n\\(P(X=x)\\)\n\\(1/2\\)\n\\(1/2\\)\n\n\n\nThis represents a discrete random variable, where the set of possible values is finite or countably infinite (e.g., the number of coin tosses before the first tail).",
+    "crumbs": [
+      "Theory",
+      "Discrete Random Variables"
+    ]
   },
   {
     "objectID": "discreteRV.html#parameters-of-a-probability-distribution",
     "href": "discreteRV.html#parameters-of-a-probability-distribution",
     "title": "Discrete Random Variables",
     "section": "Parameters of a Probability Distribution",
-    "text": "Parameters of a Probability Distribution\n\nMean (Expected Value)\nThe mean is the central, weighted average value of the random variable. It is computed as:\n\\[\n\\begin{align}\n\\mu = E[X] = \\sum x \\cdot P(X=x)\n\\end{align}\n\\]\n\n\nVariance and Standard Deviation\nVariance measures the spread or dispersion of the random variable around the mean. It can be calculated using:\n\\[\n\\begin{align}\n\\sigma^2 = \\sum \\left[(x-\\mu)^2 \\cdot P(X=x)\\right]\n\\end{align}\n\\]\nAlternatively, for manual computation, the variance may be expressed as:\n\\[\n\\begin{align}\n\\sigma^2 = \\sum \\left[x^2 \\cdot P(X=x)\\right] - \\mu^2\n\\end{align}\n\\]\nThe standard deviation is the square root of the variance."
+    "text": "Parameters of a Probability Distribution\n\nMean (Expected Value)\nThe mean is the central, weighted average value of the random variable. It is computed as:\n\\[\n\\begin{align}\n\\mu = E[X] = \\sum x \\cdot P(X=x)\n\\end{align}\n\\]\n\n\nVariance and Standard Deviation\nVariance measures the spread or dispersion of the random variable around the mean. It can be calculated using:\n\\[\n\\begin{align}\n\\sigma^2 = \\sum \\left[(x-\\mu)^2 \\cdot P(X=x)\\right]\n\\end{align}\n\\]\nAlternatively, for manual computation, the variance may be expressed as:\n\\[\n\\begin{align}\n\\sigma^2 = \\sum \\left[x^2 \\cdot P(X=x)\\right] - \\mu^2\n\\end{align}\n\\]\nThe standard deviation is the square root of the variance.",
+    "crumbs": [
+      "Theory",
+      "Discrete Random Variables"
+    ]
   },
   {
     "objectID": "samplingdistribution.html",
     "href": "samplingdistribution.html",
     "title": "Sampling Distribution",
     "section": "",
-    "text": "Sampling Distributions and the Central Limit Theorem\nWhen estimating population parameters like \\(\\mu\\), we use sample statistics \\(\\bar{X}\\). Different samples of size \\(n\\) yield different means - these sample means are random variables with their own distribution. The sampling distribution describes all possible values of \\(\\bar{X}\\) from repeated sampling. Key properties:\n\nUnbiasedness: \\(\\mu_{\\bar{X}} = \\mu\\)\n\nPrecision: \\(\\sigma_{\\bar{X}} = \\sigma/\\sqrt{n}\\)\n\nThe Central Limit Theorem (CLT) reveals the shape:\n- Exact normality: If population is normal (any \\(n\\))\n- Approximate normality: For any population with \\(n \\geq 30\\)\n\n\n\n\n\n\n\n\nPopulation Distribution\n\n\n\n\n\n\n\n\nExponential distribution with population mean\nSampling Distribution\n\n\n\n\n\n\n\n\nCLT convergence despite non-normal parent distribution\nKey Observations\n\nSample means cluster around population mean (unbiasedness)\n\nSpread decreases with larger \\(n\\) (precision improvement)\n\nNormal shape emerges despite skewed population (CLT in action)\n\nCritical Implications\n\nEnables inference even with unknown population distributions\n\nJustifies common statistical procedures (confidence intervals, hypothesis tests)\n\nFails if:\n‣ Small samples (\\(n &lt; 30\\)) from non-normal populations\n‣ Population variance is infinite"
+    "text": "Sampling Distributions and the Central Limit Theorem\nWhen estimating population parameters like \\(\\mu\\), we use sample statistics \\(\\bar{X}\\). Different samples of size \\(n\\) yield different means - these sample means are random variables with their own distribution. The sampling distribution describes all possible values of \\(\\bar{X}\\) from repeated sampling. Key properties:\n\nUnbiasedness: \\(\\mu_{\\bar{X}} = \\mu\\)\n\nPrecision: \\(\\sigma_{\\bar{X}} = \\sigma/\\sqrt{n}\\)\n\nThe Central Limit Theorem (CLT) reveals the shape:\n- Exact normality: If population is normal (any \\(n\\))\n- Approximate normality: For any population with \\(n \\geq 30\\)\n\n\n\n\n\n\n\n\nPopulation Distribution\n\n\n\n\n\n\n\n\nExponential distribution with population mean\nSampling Distribution\n\n\n\n\n\n\n\n\nCLT convergence despite non-normal parent distribution\nKey Observations\n\nSample means cluster around population mean (unbiasedness)\n\nSpread decreases with larger \\(n\\) (precision improvement)\n\nNormal shape emerges despite skewed population (CLT in action)\n\nCritical Implications\n\nEnables inference even with unknown population distributions\n\nJustifies common statistical procedures (confidence intervals, hypothesis tests)\n\nFails if:\n‣ Small samples (\\(n &lt; 30\\)) from non-normal populations\n‣ Population variance is infinite",
+    "crumbs": [
+      "Theory",
+      "Sampling Distributions"
+    ]
   },
   {
     "objectID": "basicprobability.html",
     "href": "basicprobability.html",
     "title": "Basics of Probability Theory",
     "section": "",
-    "text": "In probability theory, we study procedures that produce outcomes. Below are key definitions and concepts."
+    "text": "In probability theory, we study procedures that produce outcomes. Below are key definitions and concepts.",
+    "crumbs": [
+      "Theory",
+      "Basic Probability"
+    ]
   },
   {
     "objectID": "basicprobability.html#key-definitions",
     "href": "basicprobability.html#key-definitions",
     "title": "Basics of Probability Theory",
     "section": "Key Definitions",
-    "text": "Key Definitions\n\nEvent: A collection of outcomes from an experiment (e.g., tossing a coin, rolling a die, selecting a person at random).\nSimple Event: An outcome that cannot be decomposed into simpler components.\nSample Space: Denoted by \\(\\mathbf{S}\\), it is the set of all possible simple events.\nExample: For a die roll, \\(\\mathbf{S} = \\{1,2,3,4,5,6\\}\\).\n\nWe denote probability by \\(P\\). For any event \\(A\\), \\(P(A)\\) represents the probability of \\(A\\) occurring.\nExample: Let \\(A\\) be the event “even number” for a die roll, so \\(A = \\{2,4,6\\}\\)."
+    "text": "Key Definitions\n\nEvent: A collection of outcomes from an experiment (e.g., tossing a coin, rolling a die, selecting a person at random).\nSimple Event: An outcome that cannot be decomposed into simpler components.\nSample Space: Denoted by \\(\\mathbf{S}\\), it is the set of all possible simple events.\nExample: For a die roll, \\(\\mathbf{S} = \\{1,2,3,4,5,6\\}\\).\n\nWe denote probability by \\(P\\). For any event \\(A\\), \\(P(A)\\) represents the probability of \\(A\\) occurring.\nExample: Let \\(A\\) be the event “even number” for a die roll, so \\(A = \\{2,4,6\\}\\).",
+    "crumbs": [
+      "Theory",
+      "Basic Probability"
+    ]
   },
   {
     "objectID": "basicprobability.html#approaches-to-estimating-probability",
     "href": "basicprobability.html#approaches-to-estimating-probability",
     "title": "Basics of Probability Theory",
     "section": "Approaches to Estimating Probability",
-    "text": "Approaches to Estimating Probability\n\nRelative Frequency Approximation\nConduct or observe a procedure and count the number of times event \\(A\\) occurs. The probability is approximated by:\n\\[\n\\begin{align}\nP(A) = \\frac{\\text{number of times } A \\text{ occurred}}{\\text{number of repetitions}}\n\\end{align}\n\\]\n\n\nClassical Approach (Equally Likely Outcomes)\nAssume the procedure has \\(n\\) equally likely simple events, and event \\(A\\) can occur in \\(s\\) ways:\n\\[\n\\begin{align}\nP(A) = \\frac{\\text{number of ways } A \\text{ occurs}}{n} = \\frac{s}{n}\n\\end{align}\n\\]\nExample: For \\(A = \\{2,4,6\\}\\) in a die roll, \\(P(A)=\\frac{3}{6}=\\frac{1}{2}\\)."
+    "text": "Approaches to Estimating Probability\n\nRelative Frequency Approximation\nConduct or observe a procedure and count the number of times event \\(A\\) occurs. The probability is approximated by:\n\\[\n\\begin{align}\nP(A) = \\frac{\\text{number of times } A \\text{ occurred}}{\\text{number of repetitions}}\n\\end{align}\n\\]\n\n\nClassical Approach (Equally Likely Outcomes)\nAssume the procedure has \\(n\\) equally likely simple events, and event \\(A\\) can occur in \\(s\\) ways:\n\\[\n\\begin{align}\nP(A) = \\frac{\\text{number of ways } A \\text{ occurs}}{n} = \\frac{s}{n}\n\\end{align}\n\\]\nExample: For \\(A = \\{2,4,6\\}\\) in a die roll, \\(P(A)=\\frac{3}{6}=\\frac{1}{2}\\).",
+    "crumbs": [
+      "Theory",
+      "Basic Probability"
+    ]
   },
   {
     "objectID": "basicprobability.html#fundamental-probability-rules",
     "href": "basicprobability.html#fundamental-probability-rules",
     "title": "Basics of Probability Theory",
     "section": "Fundamental Probability Rules",
-    "text": "Fundamental Probability Rules\n\nAll probabilities must lie between 0 and 1.\nThe probabilities of all simple events in \\(\\mathbf{S}\\) must sum to 1.\n\nThe complement of event \\(A\\), denoted \\(\\bar{A}\\) or \\(A'\\), consists of all outcomes where \\(A\\) does not occur.\nA compound event combines two or more simple events.\nExample: Let \\(B = \\{\\text{number at most 4}\\} = \\{1,2,3,4\\}\\). The event “A or B” represents outcomes where either \\(A\\), \\(B\\), or both occur. To avoid double counting, we use the formal additive rule:\n\\[\n\\begin{align}\nP(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B)\n\\end{align}\n\\]"
+    "text": "Fundamental Probability Rules\n\nAll probabilities must lie between 0 and 1.\nThe probabilities of all simple events in \\(\\mathbf{S}\\) must sum to 1.\n\nThe complement of event \\(A\\), denoted \\(\\bar{A}\\) or \\(A'\\), consists of all outcomes where \\(A\\) does not occur.\nA compound event combines two or more simple events.\nExample: Let \\(B = \\{\\text{number at most 4}\\} = \\{1,2,3,4\\}\\). The event “A or B” represents outcomes where either \\(A\\), \\(B\\), or both occur. To avoid double counting, we use the formal additive rule:\n\\[\n\\begin{align}\nP(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B)\n\\end{align}\n\\]",
+    "crumbs": [
+      "Theory",
+      "Basic Probability"
+    ]
   },
   {
     "objectID": "basicstatistics.html",
     "href": "basicstatistics.html",
     "title": "Basics of Statistics",
     "section": "",
-    "text": "Population: Entire group of interest (e.g., all SU undergraduate students, all cars in a parking lot).\n\nSample: Subset of the population used for analysis.\n\nKey criteria for a good sample:\n\nRandom: Every experimental unit has an equal chance of being selected.\n\nRepresentative: Reflects the population’s diversity (e.g., includes all genders, majors).\n\n\nExample: To study SU students’ sleep habits, randomly select 200 students across all majors/years."
+    "text": "Population: Entire group of interest (e.g., all SU undergraduate students, all cars in a parking lot).\n\nSample: Subset of the population used for analysis.\n\nKey criteria for a good sample:\n\nRandom: Every experimental unit has an equal chance of being selected.\n\nRepresentative: Reflects the population’s diversity (e.g., includes all genders, majors).\n\n\nExample: To study SU students’ sleep habits, randomly select 200 students across all majors/years.",
+    "crumbs": [
+      "Theory",
+      "Basic Statistics"
+    ]
   },
   {
     "objectID": "basicstatistics.html#populations-vs.-samples",
     "href": "basicstatistics.html#populations-vs.-samples",
     "title": "Basics of Statistics",
     "section": "",
-    "text": "Population: Entire group of interest (e.g., all SU undergraduate students, all cars in a parking lot).\n\nSample: Subset of the population used for analysis.\n\nKey criteria for a good sample:\n\nRandom: Every experimental unit has an equal chance of being selected.\n\nRepresentative: Reflects the population’s diversity (e.g., includes all genders, majors).\n\n\nExample: To study SU students’ sleep habits, randomly select 200 students across all majors/years."
+    "text": "Population: Entire group of interest (e.g., all SU undergraduate students, all cars in a parking lot).\n\nSample: Subset of the population used for analysis.\n\nKey criteria for a good sample:\n\nRandom: Every experimental unit has an equal chance of being selected.\n\nRepresentative: Reflects the population’s diversity (e.g., includes all genders, majors).\n\n\nExample: To study SU students’ sleep habits, randomly select 200 students across all majors/years.",
+    "crumbs": [
+      "Theory",
+      "Basic Statistics"
+    ]
   },
   {
     "objectID": "basicstatistics.html#variables-data-types",
     "href": "basicstatistics.html#variables-data-types",
     "title": "Basics of Statistics",
     "section": "2. Variables & Data Types",
-    "text": "2. Variables & Data Types\nVariables describe experimental units (e.g., age, major, car color).\n\nNumerical (Quantitative) Data\n\nExpressed as numbers with units.\n\nExamples: Height (cm), exam scores, years of education.\n\n\n\nCategorical (Qualitative) Data\n\nNon-numeric labels or categories.\n\nNominal: No inherent order (e.g., gender, car color).\n\nOrdinal: Ordered categories (e.g., product ratings: Poor, Fair, Good)."
+    "text": "2. Variables & Data Types\nVariables describe experimental units (e.g., age, major, car color).\n\nNumerical (Quantitative) Data\n\nExpressed as numbers with units.\n\nExamples: Height (cm), exam scores, years of education.\n\n\n\nCategorical (Qualitative) Data\n\nNon-numeric labels or categories.\n\nNominal: No inherent order (e.g., gender, car color).\n\nOrdinal: Ordered categories (e.g., product ratings: Poor, Fair, Good).",
+    "crumbs": [
+      "Theory",
+      "Basic Statistics"
+    ]
   },
   {
     "objectID": "basicstatistics.html#summarizing-data",
     "href": "basicstatistics.html#summarizing-data",
     "title": "Basics of Statistics",
     "section": "3. Summarizing Data",
-    "text": "3. Summarizing Data\n\nNumerical Data\n\nMean: Average value:\n\\(\\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i\\)\n\nVariance: Spread around the mean:\n\\(s^2 = \\frac{1}{n-1}\\sum_{i=1}^n (x_i - \\bar{x})^2\\)\n\n\n\nCategorical Data\n\nUse frequency counts or percentages (e.g., 30% Biology majors, 70% Engineering)."
+    "text": "3. Summarizing Data\n\nNumerical Data\n\nMean: Average value:\n\\(\\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i\\)\n\nVariance: Spread around the mean:\n\\(s^2 = \\frac{1}{n-1}\\sum_{i=1}^n (x_i - \\bar{x})^2\\)\n\n\n\nCategorical Data\n\nUse frequency counts or percentages (e.g., 30% Biology majors, 70% Engineering).",
+    "crumbs": [
+      "Theory",
+      "Basic Statistics"
+    ]
   },
   {
     "objectID": "basicstatistics.html#visualizing-data",
     "href": "basicstatistics.html#visualizing-data",
     "title": "Basics of Statistics",
     "section": "4. Visualizing Data",
-    "text": "4. Visualizing Data\nChoose graphs based on data type:\n\nNumerical Data:\n\nHistograms: Show distribution shape.\n\nBoxplots: Highlight median, quartiles, outliers.\n\nCategorical Data:\n\nBar charts: Compare category frequencies.\n\nPie charts: Show proportions (use sparingly!)."
+    "text": "4. Visualizing Data\nChoose graphs based on data type:\n\nNumerical Data:\n\nHistograms: Show distribution shape.\n\nBoxplots: Highlight median, quartiles, outliers.\n\nCategorical Data:\n\nBar charts: Compare category frequencies.\n\nPie charts: Show proportions (use sparingly!).",
+    "crumbs": [
+      "Theory",
+      "Basic Statistics"
+    ]
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Math 214: Spring 2025",
     "section": "",
-    "text": "Welcome to the world of statistics laboratory!"
+    "text": "Welcome to the world of statistics laboratory!",
+    "crumbs": [
+      "Home"
+    ]
   }
 ]
