@@ -17,17 +17,13 @@ webr:
 
 {{< include _extensions/r-wasm/live/_knitr.qmd >}}
 
-Here's a revised paragraph with updated interpretation reflecting the actual outputs from the hypothesis tests:
-
----
-
 Hypothesis testing with large samples ($n \geq 30$) benefits from the Central Limit Theorem, which ensures that sample means are approximately normally distributed. This allows the use of $t$-tests even when the underlying population distribution is unknown. A well-defined 8-step framework aids in systematically evaluating hypotheses, balancing statistical rigor with practical decision-making.
 
 
 
 ## Motivating Case: Public Health Crisis Response
 
-Consider a public health application involving NYC’s historical temperature data. Using the `airquality` dataset (n = 153), we test whether the mean temperature exceeds 77°F. The one-sided $t$-test returns a test statistic of $t = 1.1531$ and a p-value of 0.1253. Since this p-value exceeds the typical $\alpha = 0.05$ threshold, we **fail to reject** the null hypothesis. Despite the observed mean being $77.88^\circ$F, the evidence is insufficient to conclude that temperatures are significantly above 77°F. The 95% one-sided confidence interval lower bound is 76.62°F, which further supports caution.
+Consider a public health application involving NYC’s historical temperature data. Using the `airquality` dataset (n = 153), we test whether the mean temperature exceeds 77°F. The one-sided $t$-test returns a test statistic of $t = 1.1531$ and a p-value of 0.1253. Since this p-value exceeds the typical $\alpha = 0.05$ threshold, we **fail to reject** the null hypothesis. Despite the observed mean being $77.88^\circ$F, the evidence is insufficient to conclude that temperatures are significantly above 77°F. 
 
 
 
