@@ -130,25 +130,43 @@
     ]
   },
   {
-    "objectID": "HTLargeSamples.html",
-    "href": "HTLargeSamples.html",
-    "title": "Hypothesis Testing: Large Samples",
+    "objectID": "HTSmallSamples.html",
+    "href": "HTSmallSamples.html",
+    "title": "Hypothesis Testing: Small Samples",
     "section": "",
-    "text": "Hypothesis testing with large samples (\\(n \\geq 30\\)) benefits from the Central Limit Theorem, which ensures that sample means are approximately normally distributed. This allows the use of \\(t\\)-tests even when the underlying population distribution is unknown. A well-defined 8-step framework aids in systematically evaluating hypotheses, balancing statistical rigor with practical decision-making.",
+    "text": "Hypothesis Testing with Small Samples\nWhen dealing with small sample sizes (\\(n &lt; 30\\)), classical large-sample results like the Central Limit Theorem may no longer guarantee normality of the sampling distribution. In such cases, it’s crucial to:\n\nEvaluate the normality assumption before applying parametric tests,\nUse robust non-parametric alternatives when appropriate, and\nInterpret results cautiously, understanding the impact of small \\(n\\) on variability and inference.\n\nBelow we walk through several demonstrations where these issues come to the fore.\n\nExample 1: Optical Density and Toxicity Limits\nWe test whether the median optical density of a new batch of formaldehyde exceeds various safety thresholds.\nObserved values:\n\n\n\n\n\n\n\n\nUsing a one-sample sign test with median hypothesis \\(H_0: \\text{median} = 0.01\\) versus \\(H_1: \\text{median} &gt; 0.01\\), we obtain:\n\n\n\n\n\n\n\n\nResults:\n\nAll 6 values exceed 0.01 → \\(s = 6\\)\np-value = 0.0156 → Reject \\(H_0\\) at 5% level\n95% CI for median: (0.1531, ∞)\n\nMedian estimate = 0.492\n\nThus, there is statistically significant evidence that the population median optical density exceeds 0.01.\n\n\n\nExample 2: Insect Spray Efficacy\nWe examine whether Spray C reduces insect counts below a target mean of 15:\n\n\n\n\n\n\n\n\nResults:\n\nSample mean = 2.08\nt-statistic = –22.65, df = 11\n95% upper bound = 3.11\np-value ≈ 7.0 × 10⁻¹¹\n\nDespite minor skewness in the Q-Q plot, the extreme t-statistic and low p-value offer strong evidence that the mean count is much lower than 15. Spray C is highly effective.\n\n\n\nExample 3: CO₂ Uptake in Quebec Plants\nWe test whether the median CO₂ uptake differs from 25 μmol/m²:\n\n\n\n\n\n\n\n\nShapiro-Wilk Test:\n\nW = 0.86, p = 0.0001 → Reject normality\n\nWilcoxon Test (nonparametric):\n\nV = 794.5, p-value ≈ 1.85 × 10⁻⁵\nWarning due to ties (non-exact p-value)\n\nThere is strong evidence that the true median differs from 25. The Wilcoxon test is preferred due to non-normality and ties in the data.\n\nThese results show how different inferential techniques adapt to the sample size, normality, and test direction. In each case, statistical output supports a meaningful, interpretable scientific decision."
+  },
+  {
+    "objectID": "discreteRV.html",
+    "href": "discreteRV.html",
+    "title": "Discrete Random Variables",
+    "section": "",
+    "text": "In the next three lab assignments, students will review the concept of a random variable and its probability distribution. They will learn how to determine key parameters such as mean, variance, and standard deviation, and compute probabilities for different outcomes.",
     "crumbs": [
       "Theory",
-      "Hypothesis Testing: large Samples"
+      "Discrete Random Variables"
     ]
   },
   {
-    "objectID": "HTLargeSamples.html#motivating-case-public-health-crisis-response",
-    "href": "HTLargeSamples.html#motivating-case-public-health-crisis-response",
-    "title": "Hypothesis Testing: Large Samples",
-    "section": "Motivating Case: Public Health Crisis Response",
-    "text": "Motivating Case: Public Health Crisis Response\nConsider a public health application involving NYC’s historical temperature data. Using the airquality dataset (n = 153), we test whether the mean temperature exceeds 77°F. The one-sided \\(t\\)-test returns a test statistic of \\(t = 1.1531\\) and a p-value of 0.1253. Since this p-value exceeds the typical \\(\\alpha = 0.05\\) threshold, we fail to reject the null hypothesis. Despite the observed mean being \\(77.88^\\circ\\)F, the evidence is insufficient to conclude that temperatures are significantly above 77°F.\n\n\n\n\n\n\n\n\n\nPoultry Farming (ChickWeight)\nIn contrast, consider the ChickWeight dataset where we examine whether chicks on Diet 1 have a mean weight different from 100g. With n = 220, a two-sided \\(t\\)-test yields \\(t = 0.6926\\) and a p-value of 0.4893. The observed mean weight is 102.65g, but again the large p-value indicates no significant difference from the hypothesized mean. The 95% confidence interval (95.12g, 110.17g) includes 100g, reinforcing that any deviation could easily be due to sampling variability.\n\n\n\n\n\n\n\n\nThese examples highlight that even with large samples, statistical significance depends on both effect size and variability—not merely sample size. Proper interpretation ensures sound, data-driven decisions.",
+    "objectID": "discreteRV.html#discrete-random-variables",
+    "href": "discreteRV.html#discrete-random-variables",
+    "title": "Discrete Random Variables",
+    "section": "Discrete Random Variables",
+    "text": "Discrete Random Variables\nA random variable, typically denoted by \\(X\\), is a variable that takes on a numerical value determined by chance for each outcome of an experiment. A probability distribution provides the probability for each possible value of \\(X\\), often presented in a table, formula, or graph.\nExample: Suppose you flip a coin. If it lands on tails, you win $1; if it lands on heads, you win $0. Here, the random variable \\(X\\) has two values: 1 and 0. Since the outcomes are equally likely, the probability distribution is:\n\n\n\n\\(X\\)\n0\n1\n\n\n\n\n\\(P(X=x)\\)\n\\(1/2\\)\n\\(1/2\\)\n\n\n\nThis represents a discrete random variable, where the set of possible values is finite or countably infinite (e.g., the number of coin tosses before the first tail).",
     "crumbs": [
       "Theory",
-      "Hypothesis Testing: large Samples"
+      "Discrete Random Variables"
+    ]
+  },
+  {
+    "objectID": "discreteRV.html#parameters-of-a-probability-distribution",
+    "href": "discreteRV.html#parameters-of-a-probability-distribution",
+    "title": "Discrete Random Variables",
+    "section": "Parameters of a Probability Distribution",
+    "text": "Parameters of a Probability Distribution\n\nMean (Expected Value)\nThe mean is the central, weighted average value of the random variable. It is computed as:\n\\[\n\\begin{align}\n\\mu = E[X] = \\sum x \\cdot P(X=x)\n\\end{align}\n\\]\n\n\nVariance and Standard Deviation\nVariance measures the spread or dispersion of the random variable around the mean. It can be calculated using:\n\\[\n\\begin{align}\n\\sigma^2 = \\sum \\left[(x-\\mu)^2 \\cdot P(X=x)\\right]\n\\end{align}\n\\]\nAlternatively, for manual computation, the variance may be expressed as:\n\\[\n\\begin{align}\n\\sigma^2 = \\sum \\left[x^2 \\cdot P(X=x)\\right] - \\mu^2\n\\end{align}\n\\]\nThe standard deviation is the square root of the variance.",
+    "crumbs": [
+      "Theory",
+      "Discrete Random Variables"
     ]
   },
   {
@@ -185,36 +203,25 @@
     ]
   },
   {
-    "objectID": "discreteRV.html",
-    "href": "discreteRV.html",
-    "title": "Discrete Random Variables",
+    "objectID": "HTLargeSamples.html",
+    "href": "HTLargeSamples.html",
+    "title": "Hypothesis Testing: Large Samples",
     "section": "",
-    "text": "In the next three lab assignments, students will review the concept of a random variable and its probability distribution. They will learn how to determine key parameters such as mean, variance, and standard deviation, and compute probabilities for different outcomes.",
+    "text": "Hypothesis testing with large samples (\\(n \\geq 30\\)) benefits from the Central Limit Theorem, which ensures that sample means are approximately normally distributed. This allows the use of \\(t\\)-tests even when the underlying population distribution is unknown. A well-defined 8-step framework aids in systematically evaluating hypotheses, balancing statistical rigor with practical decision-making.",
     "crumbs": [
       "Theory",
-      "Discrete Random Variables"
+      "Hypothesis Testing: large Samples"
     ]
   },
   {
-    "objectID": "discreteRV.html#discrete-random-variables",
-    "href": "discreteRV.html#discrete-random-variables",
-    "title": "Discrete Random Variables",
-    "section": "Discrete Random Variables",
-    "text": "Discrete Random Variables\nA random variable, typically denoted by \\(X\\), is a variable that takes on a numerical value determined by chance for each outcome of an experiment. A probability distribution provides the probability for each possible value of \\(X\\), often presented in a table, formula, or graph.\nExample: Suppose you flip a coin. If it lands on tails, you win $1; if it lands on heads, you win $0. Here, the random variable \\(X\\) has two values: 1 and 0. Since the outcomes are equally likely, the probability distribution is:\n\n\n\n\\(X\\)\n0\n1\n\n\n\n\n\\(P(X=x)\\)\n\\(1/2\\)\n\\(1/2\\)\n\n\n\nThis represents a discrete random variable, where the set of possible values is finite or countably infinite (e.g., the number of coin tosses before the first tail).",
+    "objectID": "HTLargeSamples.html#motivating-case-public-health-crisis-response",
+    "href": "HTLargeSamples.html#motivating-case-public-health-crisis-response",
+    "title": "Hypothesis Testing: Large Samples",
+    "section": "Motivating Case: Public Health Crisis Response",
+    "text": "Motivating Case: Public Health Crisis Response\nConsider a public health application involving NYC’s historical temperature data. Using the airquality dataset (n = 153), we test whether the mean temperature exceeds 77°F. The one-sided \\(t\\)-test returns a test statistic of \\(t = 1.1531\\) and a p-value of 0.1253. Since this p-value exceeds the typical \\(\\alpha = 0.05\\) threshold, we fail to reject the null hypothesis. Despite the observed mean being \\(77.88^\\circ\\)F, the evidence is insufficient to conclude that temperatures are significantly above 77°F.\n\n\n\n\n\n\n\n\n\nPoultry Farming (ChickWeight)\nIn contrast, consider the ChickWeight dataset where we examine whether chicks on Diet 1 have a mean weight different from 100g. With n = 220, a two-sided \\(t\\)-test yields \\(t = 0.6926\\) and a p-value of 0.4893. The observed mean weight is 102.65g, but again the large p-value indicates no significant difference from the hypothesized mean. The 95% confidence interval (95.12g, 110.17g) includes 100g, reinforcing that any deviation could easily be due to sampling variability.\n\n\n\n\n\n\n\n\nThese examples highlight that even with large samples, statistical significance depends on both effect size and variability—not merely sample size. Proper interpretation ensures sound, data-driven decisions.",
     "crumbs": [
       "Theory",
-      "Discrete Random Variables"
-    ]
-  },
-  {
-    "objectID": "discreteRV.html#parameters-of-a-probability-distribution",
-    "href": "discreteRV.html#parameters-of-a-probability-distribution",
-    "title": "Discrete Random Variables",
-    "section": "Parameters of a Probability Distribution",
-    "text": "Parameters of a Probability Distribution\n\nMean (Expected Value)\nThe mean is the central, weighted average value of the random variable. It is computed as:\n\\[\n\\begin{align}\n\\mu = E[X] = \\sum x \\cdot P(X=x)\n\\end{align}\n\\]\n\n\nVariance and Standard Deviation\nVariance measures the spread or dispersion of the random variable around the mean. It can be calculated using:\n\\[\n\\begin{align}\n\\sigma^2 = \\sum \\left[(x-\\mu)^2 \\cdot P(X=x)\\right]\n\\end{align}\n\\]\nAlternatively, for manual computation, the variance may be expressed as:\n\\[\n\\begin{align}\n\\sigma^2 = \\sum \\left[x^2 \\cdot P(X=x)\\right] - \\mu^2\n\\end{align}\n\\]\nThe standard deviation is the square root of the variance.",
-    "crumbs": [
-      "Theory",
-      "Discrete Random Variables"
+      "Hypothesis Testing: large Samples"
     ]
   },
   {

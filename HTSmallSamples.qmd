@@ -1,0 +1,108 @@
+---
+title: "Hypothesis Testing: Small Samples"
+format: 
+  live-html:
+    theme:
+      light: [lux, theme-light.scss]
+      dark: [superhero, theme-dark.scss]
+engine: knitr
+toc: true
+webr:
+  packages:
+    - palmerpenguins 
+    - dplyr
+    - ggplot2
+    - purrr
+    - BSDA
+    - nortest
+---
+
+{{< include _extensions/r-wasm/live/_knitr.qmd >}}
+
+# Hypothesis Testing with Small Samples
+
+When dealing with small sample sizes ($n < 30$), classical large-sample results like the Central Limit Theorem may no longer guarantee normality of the sampling distribution. In such cases, it's crucial to:
+
+- Evaluate the normality assumption before applying parametric tests,
+- Use robust non-parametric alternatives when appropriate, and
+- Interpret results cautiously, understanding the impact of small $n$ on variability and inference.
+
+Below we walk through several demonstrations where these issues come to the fore.
+
+### Example 1: Optical Density and Toxicity Limits
+
+We test whether the **median optical density** of a new batch of formaldehyde exceeds various safety thresholds.
+
+Observed values:
+
+```{webr}
+Formaldehyde$optden
+```
+
+Using a one-sample **sign test** with median hypothesis $H_0: \text{median} = 0.01$ versus $H_1: \text{median} > 0.01$, we obtain:
+
+```{webr}
+library(BSDA)
+SIGN.test(Formaldehyde$optden, md = 0.01, alternative = "greater")
+```
+
+**Results**:
+
+- All 6 values exceed 0.01 → $s = 6$
+- p-value = **0.0156** → Reject $H_0$ at 5% level
+- 95% CI for median: **(0.1531, ∞)**  
+- Median estimate = **0.492**
+
+Thus, there is statistically significant evidence that the population median optical density exceeds 0.01.
+
+---
+
+### Example 2: Insect Spray Efficacy
+
+We examine whether **Spray C** reduces insect counts below a target mean of 15:
+
+```{webr}
+library(car)
+library(nortest)
+sprayC <- subset(InsectSprays, spray == "C")$count
+qqPlot(sprayC)
+ad.test(sprayC)
+t.test(sprayC, mu = 15, alternative = "less")
+```
+
+**Results**:
+
+- Sample mean = **2.08**
+- t-statistic = **–22.65**, df = 11
+- 95% upper bound = **3.11**
+- p-value ≈ **7.0 × 10⁻¹¹**
+
+Despite minor skewness in the Q-Q plot, the extreme t-statistic and low p-value offer **strong evidence** that the mean count is much lower than 15. Spray C is highly effective.
+
+---
+
+### Example 3: CO₂ Uptake in Quebec Plants
+
+We test whether the **median CO₂ uptake** differs from 25 μmol/m²:
+
+```{webr}
+quebec <- subset(CO2, Type == "Quebec")$uptake
+qqPlot(quebec)
+shapiro.test(quebec)        # n = 21
+wilcox.test(quebec, mu = 25)
+```
+
+**Shapiro-Wilk Test**:
+
+- W = **0.86**, p = **0.0001** → Reject normality
+
+**Wilcoxon Test** (nonparametric):
+
+- V = **794.5**, p-value ≈ **1.85 × 10⁻⁵**
+- Warning due to ties (non-exact p-value)
+
+There is **strong evidence** that the true median differs from 25. The Wilcoxon test is preferred due to non-normality and ties in the data.
+
+--- 
+
+These results show how different inferential techniques adapt to the sample size, normality, and test direction. In each case, statistical output supports a meaningful, interpretable scientific decision.
