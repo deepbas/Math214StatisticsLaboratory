@@ -137,7 +137,7 @@
     "text": "When working with small samples (\\(n &lt; 30\\)), the Central Limit Theorem no longer guarantees normality of sample means. This requires careful assumption checking and often necessitates nonparametric methods. Below, we outline a systematic framework and demonstrate its application with real-world examples.",
     "crumbs": [
       "Theory",
-      "Hypothesis Testing: large Samples"
+      "Hypothesis Testing: small Samples"
     ]
   },
   {
@@ -148,7 +148,7 @@
     "text": "Framework for Small-Sample Inference\n\nState hypotheses: Define \\(H_0\\) (null) and \\(H_1\\) (alternative)\n\nCheck normality: Use graphical (Q-Q plots) and statistical tests (Shapiro-Wilk/Anderson-Darling)\n\nChoose test:\n\nIf normality holds → Parametric \\(t\\)-test\n\nIf normality violated or \\(n\\) very small → Nonparametric test (e.g., Wilcoxon, sign test)\n\n\nCalculate test statistic and p-value\n\nCompare p-value to \\(\\alpha\\) (typically 0.05)\n\nMake reject/fail to reject decision\n\nInterpret results in context\n\n\n\nExample 1: Optical Density Safety Threshold (Sign Test)\nScenario: A chemical batch with \\(n = 6\\) measurements must verify if its median optical density exceeds 0.01.\n\n\n\n\n\n\n\n\nHypotheses:\n\\(H_0\\): M \\(= 0.01\\)\n\\(H_1\\): M \\(&gt; 0.01\\)\nAnalysis (Sign Test):\n\n\n\n\n\n\n\n\nResults:\n\nAll 6 observations exceed 0.01 → Test statistic \\(s = 6\\)\n\nExact binomial p-value = \\(0.0156\\)\n\n95% CI for median: \\((0.1531, \\infty)\\)\n\nConclusion: Reject \\(H_0\\) (\\(p &lt; 0.05\\)). Strong evidence that the true median exceeds 0.01.\n\n\n\nExample 2: Insect Spray Efficacy (\\(t\\)-Test with Normality Check)\nScenario: Test if Spray C (\\(n = 12\\)) reduces insect counts below 15.\n\n\n\n\n\n\n\n\nHypotheses:\n\\(H_0\\): \\(\\mu = 15\\)\n\\(H_1\\): \\(\\mu &lt; 15\\)\nAnalysis (\\(t\\)-test):\n\n\n\n\n\n\n\n\nResults:\n- Sample mean = \\(2.08\\)\n- \\(t = -22.65\\), df = 11\n- 95% upper bound = \\(3.11\\)\n- p-value ≈ \\(7.0 \\times 10^{-11}\\)\nConclusion: Extreme significance (\\(p \\approx 0\\)) despite mild non-normality. Spray C is highly effective.\n\n\n\nExample 3: CO₂ Uptake in Quebec Plants (Wilcoxon Test)\nScenario: Test if median CO₂ uptake differs from 25 μmol/m² (\\(n = 21\\)).\n\n\n\n\n\n\n\n\nHypotheses:\n\\(H_0\\): M = 25\n\\(H_1\\): M ≠ 25\nAnalysis (Wilcoxon Signed-Rank):\n\n\n\n\n\n\n\n\nResults:\n\nTest statistic \\(V = 794.5\\)\n\np-value ≈ \\(1.85 \\times 10^{-5}\\) (with ties adjustment)\n\nConclusion: Reject \\(H_0\\). Nonparametric methods are essential here due to non-normality.",
     "crumbs": [
       "Theory",
-      "Hypothesis Testing: large Samples"
+      "Hypothesis Testing: small Samples"
     ]
   },
   {
@@ -225,7 +225,7 @@
     "text": "Hypothesis testing with large samples (\\(n \\geq 30\\)) benefits from the Central Limit Theorem, which ensures that sample means are approximately normally distributed. This allows the use of \\(t\\)-tests even when the underlying population distribution is unknown. A well-defined 8-step framework aids in systematically evaluating hypotheses, balancing statistical rigor with practical decision-making.",
     "crumbs": [
       "Theory",
-      "Hypothesis Testing: small Samples"
+      "Hypothesis Testing: large Samples"
     ]
   },
   {
@@ -236,7 +236,7 @@
     "text": "Motivating Case: Public Health Crisis Response\nConsider a public health application involving NYC’s historical temperature data. Using the airquality dataset (n = 153), we test whether the mean temperature exceeds 77°F. The one-sided \\(t\\)-test returns a test statistic of \\(t = 1.1531\\) and a p-value of 0.1253. Since this p-value exceeds the typical \\(\\alpha = 0.05\\) threshold, we fail to reject the null hypothesis. Despite the observed mean being \\(77.88^\\circ\\)F, the evidence is insufficient to conclude that temperatures are significantly above 77°F.\n\n\n\n\n\n\n\n\n\nPoultry Farming (ChickWeight)\nIn contrast, consider the ChickWeight dataset where we examine whether chicks on Diet 1 have a mean weight different from 100g. With n = 220, a two-sided \\(t\\)-test yields \\(t = 0.6926\\) and a p-value of 0.4893. The observed mean weight is 102.65g, but again the large p-value indicates no significant difference from the hypothesized mean. The 95% confidence interval (95.12g, 110.17g) includes 100g, reinforcing that any deviation could easily be due to sampling variability.\n\n\n\n\n\n\n\n\nThese examples highlight that even with large samples, statistical significance depends on both effect size and variability—not merely sample size. Proper interpretation ensures sound, data-driven decisions.",
     "crumbs": [
       "Theory",
-      "Hypothesis Testing: small Samples"
+      "Hypothesis Testing: large Samples"
     ]
   },
   {
