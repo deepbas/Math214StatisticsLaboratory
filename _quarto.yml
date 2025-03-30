@@ -31,7 +31,9 @@ website:
           - text: "Confidence Intervals"
             href: ConfidenceIntervals.html
           - text: "Hypothesis Testing: large Samples"
-            href: HTLargeSamples.html            
+            href: HTSmallSamples.html            
+          - text: "Hypothesis Testing: small Samples"
+            href: HTLargeSamples.html  
       - section: "ShinyApps"
         contents:
           - text: "Sampling Distribution"
