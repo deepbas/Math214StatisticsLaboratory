@@ -1,0 +1,15 @@
+{
+  "hash": "4453a7139198741c5f915ae2ce4ebfe6",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Hypothesis Testing with Two Samples\"\nformat: \n  live-html:\n    theme:\n      light: [lux, theme-light.scss]\n      dark: [superhero, theme-dark.scss]\nengine: knitr\ntoc: true\nwebr:\n  packages:\n    - palmerpenguins \n    - dplyr\n    - ggplot2\n    - purrr\n    - BSDA\n    - nortest\n    - car\nwarning: false\n---\n\n::: {.cell}\n\n:::\n\n\n\n### **Background: Two-Sample t-Tests**\n\nTwo-sample t-tests compare population means using two independent or paired samples.  \n\n1. **Independent t-test**: Compares means of two unrelated groups (e.g., measurements from two sites).  \n   - **Assumptions**:  \n     - Independence between groups  \n     - Normality (or large sample size for CLT)  \n     - Homogeneity of variances **not required** (default in R uses Welch’s correction).  \n\n   - **Test Statistic**:  \n     $$\n     t = \\frac{\\bar{x}_1 - \\bar{x}_2}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}}\n     $$  \n     Degrees of freedom approximated via Welch-Satterthwaite equation.  \n\n2. **Paired t-test**: Compares means of two related groups (e.g., pre/post measurements).  \n   - **Assumptions**:  \n     - Paired observations  \n     - Differences approximately normal  \n\n   - **Test Statistic**:  \n     $$\n     t = \\frac{\\bar{d}}{s_d / \\sqrt{n}}\n     $$  \n     where $\\bar{d}$ = mean difference, $s_d$ = standard deviation of differences.\n\n---\n\n### **Example 1: Independent t-Test**  \n\nUsing the built‐in `mtcars` dataset to compare miles per gallon between automatic (0) and manual (1) transmissions.\n\n::: {.cell}\n\n```{.r .cell-code}\n# Independent t-test using mtcars dataset\ndata(mtcars)\nt.test(mpg ~ am, data = mtcars)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n\n\tWelch Two Sample t-test\n\ndata:  mpg by am\nt = -3.7671, df = 18.332, p-value = 0.001374\nalternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0\n95 percent confidence interval:\n -11.280194  -3.209684\nsample estimates:\nmean in group 0 mean in group 1 \n       17.14737        24.39231 \n```\n\n\n:::\n:::\n\n\n### **Example 2: Paired t-Test**  \n\nUse the built‐in `sleep` dataset to compare extra sleep under two drug treatments.\n\n::: {.cell}\n\n```{.r .cell-code}\n# Paired t-test using sleep dataset\ndata(sleep)\ndrug1 <- sleep[sleep$group == 1, \"extra\"]\ndrug2 <- sleep[sleep$group == 2, \"extra\"]\nt.test(drug1, drug2, paired = TRUE)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n\n\tPaired t-test\n\ndata:  drug1 and drug2\nt = -4.0621, df = 9, p-value = 0.002833\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n -2.4598858 -0.7001142\nsample estimates:\nmean difference \n          -1.58 \n```\n\n\n:::\n:::\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

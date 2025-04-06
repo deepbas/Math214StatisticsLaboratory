@@ -1,0 +1,77 @@
+---
+title: "Hypothesis Testing with Two Samples"
+format: 
+  live-html:
+    theme:
+      light: [lux, theme-light.scss]
+      dark: [superhero, theme-dark.scss]
+engine: knitr
+toc: true
+webr:
+  packages:
+    - palmerpenguins 
+    - dplyr
+    - ggplot2
+    - purrr
+    - BSDA
+    - nortest
+    - car
+warning: false
+---
+
+{{< include _extensions/r-wasm/live/_knitr.qmd >}}
+
+
+### **Background: Two-Sample t-Tests**
+
+Two-sample t-tests compare population means using two independent or paired samples.  
+
+1. **Independent t-test**: Compares means of two unrelated groups (e.g., measurements from two sites).  
+   - **Assumptions**:  
+     - Independence between groups  
+     - Normality (or large sample size for CLT)  
+     - Homogeneity of variances **not required** (default in R uses Welch’s correction).  
+
+   - **Test Statistic**:  
+     $$
+     t = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
+     $$  
+     Degrees of freedom approximated via Welch-Satterthwaite equation.  
+
+2. **Paired t-test**: Compares means of two related groups (e.g., pre/post measurements).  
+   - **Assumptions**:  
+     - Paired observations  
+     - Differences approximately normal  
+
+   - **Test Statistic**:  
+     $$
+     t = \frac{\bar{d}}{s_d / \sqrt{n}}
+     $$  
+     where $\bar{d}$ = mean difference, $s_d$ = standard deviation of differences.
+
+---
+
+### **Example 1: Independent t-Test**  
+
+Using the built‐in `mtcars` dataset to compare miles per gallon between automatic (0) and manual (1) transmissions.
+
+```{r}
+# Independent t-test using mtcars dataset
+data(mtcars)
+t.test(mpg ~ am, data = mtcars)
+```
+
+
+### **Example 2: Paired t-Test**  
+
+Use the built‐in `sleep` dataset to compare extra sleep under two drug treatments.
+
+```{r}
+# Paired t-test using sleep dataset
+data(sleep)
+drug1 <- sleep[sleep$group == 1, "extra"]
+drug2 <- sleep[sleep$group == 2, "extra"]
+t.test(drug1, drug2, paired = TRUE)
+```
+
+

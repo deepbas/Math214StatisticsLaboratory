@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-99.9.9">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>sampapp – Math 214: Statistical Laboratory</title>
+
+
+<title>Hypothesis Testing with Two Samples – Math 214: Statistical Laboratory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,7 +20,42 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
+
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -36,8 +74,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-a0649ace7b9e9e15dfb5fe311d767a49.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8abc1cfb2d73f1c60d21f7cc84eb4eb7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-9af36d258d6b6988a5b9202abe40c717.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-86b21ad6495d6ba00571807d4e9909c8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b167100507321148c0eef69d191afecb.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -63,25 +104,65 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link rel="stylesheet" href="styles.css">
+}</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 </head>
+
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sampApp.html">ShinyApps</a></li><li class="breadcrumb-item"><a href="./sampApp.html">Sampling Distribution</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./basicstatistics.html">Theory</a></li><li class="breadcrumb-item"><a href="./HTTwoSamples.html">Hypothesis Testing: Two Samples</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Math 214: Statistical Laboratory</a> 
         <div class="sidebar-tools-main">
@@ -96,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
@@ -116,25 +197,25 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./usdata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dataset1</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Theory</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basicstatistics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic Statistics</span></a>
@@ -184,24 +265,24 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./HTTwoSamples.html" class="sidebar-item-text sidebar-link">
+  <a href="./HTTwoSamples.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Hypothesis Testing: Two Samples</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">ShinyApps</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sampApp.html" class="sidebar-item-text sidebar-link active">
+  <a href="./sampApp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sampling Distribution</span></a>
   </div>
 </li>
@@ -212,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -221,28 +302,166 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./RandRStudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R and RStudio</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background-two-sample-t-tests" id="toc-background-two-sample-t-tests" class="nav-link active" data-scroll-target="#background-two-sample-t-tests"><strong>Background: Two-Sample t-Tests</strong></a></li>
+  <li><a href="#example-1-independent-t-test" id="toc-example-1-independent-t-test" class="nav-link" data-scroll-target="#example-1-independent-t-test"><strong>Example 1: Independent t-Test</strong></a></li>
+  <li><a href="#example-2-paired-t-test" id="toc-example-2-paired-t-test" class="nav-link" data-scroll-target="#example-2-paired-t-test"><strong>Example 2: Paired t-Test</strong></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sampApp.html">ShinyApps</a></li><li class="breadcrumb-item"><a href="./sampApp.html">Sampling Distribution</a></li></ol></nav></header><iframe width="1280" height="1300" src="https://shinylive.io/r/app/#h=0&amp;code=NobwRAdghgtgpmAXGKAHVA6ASmANGAYwHsIAXOMpMAGwEsAjAJykYE8AKAZwAtaJWAlAB0IdJiw6laAE1YA3OI05xhohszbtU1IqWqCRYjRwItVRiewDmjGQFEAHqWbn1lgI7vtuxq-GbGInoAV05SeihlP2N2ABEAFWjLVGDGNNURYNoAAgAeAFpsgDNqLOkABSgrOHYRbOypPThKiDhqWrAAZVhtPits2Now2xCpEmyoCGlsgGEAGXihMAFcOuzOGTgIxjmoViJg0lqIevqN6S2WFrbj09OAdzbqa-a1u-rmaVoiACFD0hInA6XzCS1w2SW5SIKWoUDGJ0GwwYh2+EEQYLe7yx2IIHQAckRGDAoNQltkALwQsCMCCEmAYk7YpnYpYAVQgtCKdLJlKWjGCHKKDOZIruSywtCs3FI2U6AGs4I9pDyqYxqLSicLRaKlnM4EUZfLFXBlWAKar6HBSFAtdrmUsfrQYERpCSVXz6E7TatGXamUsZlBggRuKx3dTTMHQ0sBCtMXdOHQLowAJIQFJHJYQMFU7owbRwWW0ABecHReGyAFZwZWAAy18EAZgbVbjvveic2qfThw6cpzSzxwRglsY2SIRVlPWocE45fBAEYW3X6zXV9kl22mRBh4paAQ0xmOsoTQOwFhJtIiDBZXATfONwAmRtb7FQAjwv6kAEQDrBVCuuQZ5YAK2QAILQPoGycDmBCwpwnDmks9CkBA+SoLYxJsDG8bZKodyvvUxJ8C8tzvNa9DKKQpG4fUFE0WAUIwnCqI5t4eisAA8ocR5LKg0LlDopAxoR7y0Q0UD0AxABitBKDKAAcU75jOMF4OJzLsfo3GkLxYCcNOcAALJwJMsS6IJuhqeC3BwJK0pIWAABs9aoA4Ik+v67Z3PRkw3EsdixGB46TnmBbWRpTIJDpekGSpcCdMOWGsPEkkzjGnl+vUWlcTxvZLHFBYmZMlmkNZ2S2fZMq8s5rnucsolit5py+a0rxdNOfQDEMzjIvCIXZMVEARc1oolGUWBEPcZFZfUxClDAv5OeCOUxfl+mdRAVgABI9R5kXMvNw5LStQlrZmYCeKVQ1qbGsaZVi4mtf5HUqV1iK9aMqIDSZXyTCNs3FKUMiTdNB1Mkdi3sMt2SrXlF2FXQW2-bQky7aCDUPbNkMnbDZ3wx0V1CSj-0ibGuH4aclOqBkw2KAoY4FMUAofqi7B8Bm4IHLphzgsoCGogI2QgGsADE2RYKZrMKLD0LBLC-XVK0zAAowaz8agAD6gFQHkhSMFLUgKOwIvtlRGAntI7M9qQAAkluU2c9y0KQIbWxmtsgqQWPYjSdLmn7RLsAucBOY1WL8oKAcCpyweh+H7xqhqN6UkndJxzDLa1hglYJ3cjCWtaAeF1AGc1ouOd56cBdeuauKBzA7CVnA1bZPkj4rNkDdNy3Tbgh3VcfJGIasAHw+hhn5OMgAvkLACkAB8c-ZJ6UyBiGNQc4cns9eCW925b4KmBvjn8xsJAxtki-L6v0h2AoZDu9v-6ASoIhrIjs5613hu0Mbpv5zgO4J+ds5R7xtrbCAjsf69FMOQEBtswHrEMloaE2s4Sl07vvSB4IDbaHfIWSk8QsCsjsFPeos8r5LxXnwaQ69bIIK9uAj2h9sjYIgMw7eSDj62VPrOc+2ZlhULnpiW+98KBHGwS-OEb9syMnFtJFm-UAQTGkNMcgTgJgQFpNafqztSDcDYfmQIChpicFQO+PoawoBqM1pwJKEhNYaJlEzIoSi2Y63BI0GcQsAGnDCHCRCTMdbCNwvYmAWEhg1HEkNAOBwpjsHgJMdgcgSTBBUE2POJMTip3iVbeAf1fypNKBk7IL4fanE6LEOJAoracCtsU9JndyniRydkX80D6i0x8nAJwmsHDfxgHwdgOtbaNJUNkAA1NkbOC5KzZAAFTZC+EUIo7BmBbRqKM8ZsZ6jiyMoSQsM4DTrAsQQKx7ZnGa1HkzYkDgRkUA2KQDg2y0kqFtqwcE0AMBEnNMQ0hQslnZwUvMvZg1DkNGhKcyxW137tisFYdiIyMHgigLOFJbzdmTNwtUa8mteBhCIDYWA7A0VAlHpSDAGALjDRdqwKlndV6IUpHWcERRaDUGoI5UWAAWOwAB2AAnGBfll9sXNVxTAbWjy6XsHmoSbldg5n8srIKnMGxSzmgXELcVWJJg6JkR0ZxOYBmUiuQ4cEFKGi9NINc8E4NTiwktFyykFiwhwFrB0IaiAqR810ZwW2Q17WjUBo9MAQgRDZJ9eq-1gaTSow4RCENoaxThpEFU6NFYAllVtlU4NKadRpu0Zmv1gTIGD3eNwAAVqEaqMzwRyBrWELVfMSyELKTnI+RAdBjhqvQWEBB+xCN1e8J1QJvHtonTq3CBi4DwE1kMjkxJ2gRGUHYttWqeWU2nmsMW2QmLyxYuML2IwUTjHYmsbmHsNalW-gbKYihSr6BNpiDW38pD0H7TUcZ5oNboOtOwchpwEU5VJbY8JyUnE2tQage1jE5YK2+h9U9eiXaGNiDK55sxUgKBEmsWeu75HKQLOsBxbAJJfsvfDe2hlEoRIkKlL9d6KDJgSC+s2PQ7H+u-mgbQHBP5AgEMAXAC5EAKQALr9zZe4kg7AHC+NwriWJlIkm-nk+CbJ5oCkJrk53Kp5p6m6egZQ6+DRAPCImJwalGCMBFGYPAQDmJMQ6wojOLgnHs2cAqUyaE8JmXZDoGELQVQ4B6i2gY80Ck+YEECJygAGn8khZDvM4jQP1GqdHkqyl0T1fciEuRjlkvJbISkwqqUvtfXCBXiSkEmrUuV3bjr+dE42cEXwrAu38y+fDlM91lcLKpiqPUiX2cQuwdlxWFKUyvdvT+Q1SpBP1ixx9Qln1+LOD0HjnAnEMC-e5+KgnhOiYk9A19QlFvZGJKgYOYnwQAD91unHmpraA8Bv6vfRYVITGAHDidwjixFQl9uwYmOigAhGDzgrBG7PY+3dKZ4lJX4uG8SxuZL2BWqpTSp59KMCMr4P5x8LZ2Wcu5fypyPx+U-EfGKxHcA8XY9lfK3tVJRaBRmIKnlCl1UbspMC6dIax3sAnb+yI8Clj9ZzD9uD6MASo5EgjkNs752LqdCSRz7YCPtkxPY+gSL2JefaYEe4hPwRYQ6207OtZc49cI+Lfrl3TInCvDKA32RxtyWbVN7I+jDGBBCM21eHItpaOmFWl25A1aMhmwfQyQ1zLUXO8xh9jAn0cEe4VLbO3P1uYE4Bo7YnxOnfbG725aAbtReyA9xT3aXuwELEzD7QIvvAB+39iVgPdDA9ReDyH0OGvUDr-AeHI6sRI5d0il3Gr23Zy3YrpkQuReurF9E16BYpcWqpAn9iP0ne3QF0yZXcAF18DV+0YzxeEzBD10Dg3Xzjem8uywC35orc25nrTQjYKytdRPX1b6E4jupM0e1GiMfQsuyeyYae7GdwqmF2H6e2P6lI80N0wOqkgGQG9QIGq2HANi0gdiZGrAUGTgiSe+cGP+IeyG-+4wgBN0eGH+X+2Q9um0-Qf+X0NBk42mwB9QMeNGb0yM8aaMPUkBK2uga2mIXBw076u2bmSBEw6Az6eencj4ZughUC0C2BYhuB4GhBxBRwkhhuEuLB3USI7BJwtBah++tujIe6AAivkLYXjLoMUAqp-EAcNFRjzHbETLoDdCIankDo9nAd-CgXvmgeipgdkJoUcAgW5nAZ3Ojm4ZSJwKYHEXviPmEroprJ4JrEjDUMztytJNJIKkFKKsOpkXCNke4JrPxHwEcAUTVKLApBTjMD8E5LTs1Ivi7DOI5ASESCSNkPYY4beoAQ7nQeUc1EfifkuurqusftPputur1kRkMU4TKAVsgvFI7oUjBCAV4bbD4aQNkhdvelAYERIZYTxgofxoZIJlJtsQmhoZ3jETITUAYQkZ9oZAZqkW8ZYRkc1NmlUbkXwPkd2gqo0UUSUSKh0ViICTkbUY-A0azs0T8K0e0RMViF0U0L0XSAMasSMaFF8ccTCeRLZCrqfsuuwHMeupqpSAuFutYTunIjwHwKwGBOgOwFkHzPTIoKoGANPOJkAA"></iframe>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./basicstatistics.html">Theory</a></li><li class="breadcrumb-item"><a href="./HTTwoSamples.html">Hypothesis Testing: Two Samples</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Hypothesis Testing with Two Samples</h1>
+</div>
 
 
 
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="background-two-sample-t-tests" class="level3">
+<h3 class="anchored" data-anchor-id="background-two-sample-t-tests"><strong>Background: Two-Sample t-Tests</strong></h3>
+<p>Two-sample t-tests compare population means using two independent or paired samples.</p>
+<ol type="1">
+<li><strong>Independent t-test</strong>: Compares means of two unrelated groups (e.g., measurements from two sites).
+<ul>
+<li><strong>Assumptions</strong>:
+<ul>
+<li>Independence between groups<br>
+</li>
+<li>Normality (or large sample size for CLT)<br>
+</li>
+<li>Homogeneity of variances <strong>not required</strong> (default in R uses Welch’s correction).</li>
+</ul></li>
+<li><strong>Test Statistic</strong>:<br>
+<span class="math display">\[
+t = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
+\]</span><br>
+Degrees of freedom approximated via Welch-Satterthwaite equation.</li>
+</ul></li>
+<li><strong>Paired t-test</strong>: Compares means of two related groups (e.g., pre/post measurements).
+<ul>
+<li><strong>Assumptions</strong>:
+<ul>
+<li>Paired observations<br>
+</li>
+<li>Differences approximately normal</li>
+</ul></li>
+<li><strong>Test Statistic</strong>:<br>
+<span class="math display">\[
+t = \frac{\bar{d}}{s_d / \sqrt{n}}
+\]</span><br>
+where <span class="math inline">\(\bar{d}\)</span> = mean difference, <span class="math inline">\(s_d\)</span> = standard deviation of differences.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="example-1-independent-t-test" class="level3">
+<h3 class="anchored" data-anchor-id="example-1-independent-t-test"><strong>Example 1: Independent t-Test</strong></h3>
+<p>Using the built‐in <code>mtcars</code> dataset to compare miles per gallon between automatic (0) and manual (1) transmissions.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Independent t-test using mtcars dataset</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(mtcars)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(mpg <span class="sc">~</span> am, <span class="at">data =</span> mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  mpg by am
+t = -3.7671, df = 18.332, p-value = 0.001374
+alternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0
+95 percent confidence interval:
+ -11.280194  -3.209684
+sample estimates:
+mean in group 0 mean in group 1 
+       17.14737        24.39231 </code></pre>
+</div>
+</div>
+</section>
+<section id="example-2-paired-t-test" class="level3">
+<h3 class="anchored" data-anchor-id="example-2-paired-t-test"><strong>Example 2: Paired t-Test</strong></h3>
+<p>Use the built‐in <code>sleep</code> dataset to compare extra sleep under two drug treatments.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Paired t-test using sleep dataset</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(sleep)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>drug1 <span class="ot">&lt;-</span> sleep[sleep<span class="sc">$</span>group <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"extra"</span>]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>drug2 <span class="ot">&lt;-</span> sleep[sleep<span class="sc">$</span>group <span class="sc">==</span> <span class="dv">2</span>, <span class="st">"extra"</span>]</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(drug1, drug2, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Paired t-test
+
+data:  drug1 and drug2
+t = -4.0621, df = 9, p-value = 0.002833
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ -2.4598858 -0.7001142
+sample estimates:
+mean difference 
+          -1.58 </code></pre>
+</div>
+</div>
+
+
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+</section>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -804,6 +1023,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

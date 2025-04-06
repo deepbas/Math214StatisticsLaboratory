@@ -34,6 +34,8 @@ website:
             href: HTLargeSamples.html            
           - text: "Hypothesis Testing: small Samples"
             href: HTSmallSamples.html  
+          - text: "Hypothesis Testing: Two Samples"
+            href: HTTwoSamples.html              
       - section: "ShinyApps"
         contents:
           - text: "Sampling Distribution"
